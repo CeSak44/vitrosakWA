@@ -1,0 +1,387 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "gallery": "Gallery",
+    "contactUs": "Contact Us",
+    "language": "Language"
+  },
+  "contact": {
+    "guedjelSetif": "Guedjel, Sétif",
+    "birElDjirOran": "Bir El Djir, Oran",
+    "viewOnGoogleMaps": "View on Google Maps",
+    "address": "75 route de batna ouled boudhil guedjel, Sétif",
+    "showroom": "Showroom & Commercial Site"
+  },
+  "footer": {
+    "description": "Leading Algerian company specialized in flat glass manufacturing and transformation since 2004.",
+    "copyright": "© 2024 VITROSAK. All rights reserved. | Algerian Glass Manufacturing Excellence"
+  },
+  "home": {
+    "hero": {
+      "title1": "Glass Processing Factory",
+      "subtitle1": "Producer of automotive, architectural, and household appliances glass.",
+      "title2": "Buses & Heavy Machinery Specialists",
+      "subtitle2": "VITROSAK is the first factory in the region to fully manufacture glass and windshields for buses and heavy construction machines, combining foreign expertise with top-quality local production.",
+      "exploreProducts": "Explore Products",
+      "viewProjects": "View Projects"
+    },
+    "products": {
+      "temperedGlass": "Tempered Glass",
+      "glazingGlass": "Curtain Wall",
+      "laminatedGlass": "Laminated Glass",
+      "busesHeavyMachinery": "Buses and Heavy Construction Machines Windshields and Window Glass",
+      "homeAppliances": "Home Appliances Glass",
+      "availableFlatCurved": "Available in both flat and curved configurations",
+      "availableDoubleTriple": "Available in double and triple glazing systems",
+      "flatTempered": "Flat Tempered Glass",
+      "curvedTempered": "Curved Tempered Glass",
+      "doubleGlazing": "Double Glazing",
+      "tripleGlazing": "Triple Glazing",
+      "shopfronts": "Shopfronts",
+      "showerEnclosures": "Shower Enclosures",
+      "staircases": "Staircases",
+      "balustrades": "Balustrades",
+      "architecturalFeatures": "Architectural Features",
+      "customDesigns": "Custom Designs",
+      "buildingFacades": "Building Façades",
+      "refrigeratorDoors": "Refrigerator Doors",
+      "energyEfficiency": "Energy Efficiency",
+      "noiseReduction": "Noise Reduction",
+      "highPerformanceBuildings": "High-Performance Buildings",
+      "extremeClimateControl": "Extreme Climate Control",
+      "hotels": "Hotels",
+      "bankCounters": "Bank Counters",
+      "skylights": "Skylights",
+      "glassFlooring": "Glass Flooring",
+      "buses": "Buses",
+      "heavyConstructionMachinery": "Heavy Construction Machinery",
+      "largeVehicleWindshields": "Large Vehicle Windshields",
+      "industrialApplications": "Industrial Applications",
+      "refrigerators": "Refrigerators",
+      "ovens": "Ovens",
+      "cooktops": "Cooktops",
+      "householdEquipment": "Household Equipment",
+      "viewCompleteRange": "View Complete Product Range",
+      "applications": "APPLICATIONS:"
+    }
+  ,
+    "productCatalog": {
+      "badge": "Product Range",
+      "sectionTitle": "Comprehensive Glass Solutions",
+      "intro": "From architectural marvels to automotive precision, our diverse product catalog meets every glass manufacturing need with uncompromising quality.",
+      "sinceLine": "Since 2004 • Algerian Glass Excellence"
+    }
+  },
+  "products": {
+    "temperedGlass": {
+      "title": "Tempered Glass",
+      "subtitle": "High-Strength Security Solutions",
+      "attributes": {
+        "highStrength": "High-strength security",
+        "impactResistant": "Impact resistant",
+        "variousDimensions": "Various dimensions available",
+        "safetyStandards": "Safety glass standards compliant"
+      },
+      "specs": {
+        "thicknessRange": "Thickness Range",
+        "maximumSize": "Maximum Size",
+        "minimumSize": "Minimum Size",
+        "edgeTypes": "Edge Types"
+      },
+      "edgeTypesValue": "Polished, Ground, Beveled"
+    },
+    "glazingGlass": {
+      "title": "Glazing Glass",
+      "subtitle": "Energy-Efficient Thermal Solutions",
+      "attributes": {
+        "thermalInsulation": "Thermal insulation",
+        "energyEfficiency": "Energy efficiency",
+        "noiseReduction": "Noise reduction",
+        "condensationControl": "Condensation control"
+      },
+      "specs": {
+        "glassTypes": "Glass Types",
+        "airGap": "Air Gap",
+        "thermalPerformance": "Thermal Performance",
+        "applications": "Applications"
+      },
+      "glassTypesValue": "VEC, VEP Systems",
+      "thermalPerformanceValue": "Low-E coatings available",
+      "applicationsValue": "Commercial & Residential"
+    },
+    "laminatedGlass": {
+      "title": "Laminated Glass",
+      "subtitle": "Impact-Resistant Safety Glass",
+      "attributes": {
+        "impactResistant": "Impact resistance",
+        "uvProtection": "UV protection",
+        "antiShatter": "Anti-shatter properties",
+        "soundInsulation": "Sound insulation"
+      },
+      "specs": {
+        "thicknessRange": "Thickness Range",
+        "maximumSize": "Maximum Size",
+        "securityLevels": "Security Levels",
+        "interlayerTypes": "Interlayer Types"
+      },
+      "securityLevelsValue": "Anti-bullet, Anti-burglary",
+      "interlayerTypesValue": "PVB, EVA, SGP"
+    },
+    "busesHeavyMachinery": {
+      "title": "Buses and Heavy Construction Machines Windshields and Window Glass",
+      "subtitle": "Heavy Vehicle Glazing Specialists",
+      "attributes": {
+        "oemQuality": "OEM quality standards",
+        "largeVehicleSpecialists": "Large vehicle specialists",
+        "curvedFlatDesigns": "Curved and flat designs",
+        "climateAdapted": "Climate adapted"
+      },
+      "specs": {
+        "vehicleTypes": "Vehicle Types",
+        "glassTypes": "Glass Types",
+        "specialFeatures": "Special Features",
+        "quality": "Quality"
+      },
+      "vehicleTypesValue": "Buses, Heavy Equipment, Construction Machinery",
+      "glassTypesValue": "Windshield, Side, Rear",
+      "specialFeaturesValue": "First regional manufacturer",
+      "qualityValue": "International automotive standards"
+    },
+    "homeAppliances": {
+      "title": "Home Appliances Glass",
+      "subtitle": "Household Equipment Solutions",
+      "attributes": {
+        "temperatureResistant": "Temperature resistant",
+        "applianceSpecific": "Appliance-specific designs",
+        "highClarity": "High clarity",
+        "safetyCertified": "Safety certified"
+      },
+      "specs": {
+        "applications": "Applications",
+        "temperatureResistance": "Temperature Resistance",
+        "customization": "Customization",
+        "standards": "Standards"
+      },
+      "applicationsValue": "Kitchen & Home Appliances",
+      "temperatureResistanceValue": "Heat-treated options",
+      "customizationValue": "Made to specification",
+      "standardsValue": "Appliance industry compliance"
+    }
+  },
+  "about": {
+    "qualityAssurance": "Quality Assurance",
+    "iso9001": "ISO 9001",
+    "certifiedExcellence": "Certified Excellence",
+    "qualityCommitment": "Our commitment to quality is validated through ISO 9001 certification, ensuring that every product meets the highest international standards for quality management.",
+    "internationalStandard": "International Standard",
+    "certificationImportance": "Certification Importance",
+    "certificationBenefits": {
+      "enhancedQuality": "Enhanced product quality and reliability",
+      "customerSatisfaction": "Improved customer satisfaction and trust",
+      "streamlinedProcesses": "Streamlined operational processes",
+      "marketAccess": "International market access and credibility",
+      "riskManagement": "Risk management and quality assurance",
+      "competitiveAdvantage": "Competitive advantage in the marketplace"
+    },
+    "certificateDetails": {
+      "certifiedCompany": "Certified Company",
+      "standard": "Standard",
+      "scope": "Scope"
+    },
+    "certificateDetailsValues": {
+      "company": "SARL VITROSAK",
+      "standard": "ISO 9001:2015",
+      "scope": "Glass Manufacturing & Transformation"
+    },
+    "qualityManagementSystem": "Our Quality Management System",
+    "qualitySystemDescription": "ISO 9001 certification ensures that every aspect of our operation is designed to deliver consistent quality and customer satisfaction.",
+    "qualityFeatures": {
+      "qms": {
+        "title": "Quality Management System",
+        "description": "Comprehensive QMS ensuring consistent product quality and customer satisfaction across all operations."
+      },
+      "customerRequirements": {
+        "title": "Customer Requirements",
+        "description": "Systematic approach to understand, document, and consistently meet customer expectations and specifications."
+      },
+      "regulatoryCompliance": {
+        "title": "Regulatory Compliance",
+        "description": "Full compliance with international standards and local regulatory requirements for all our products."
+      },
+      "continuousImprovement": {
+        "title": "Continuous Improvement",
+        "description": "Ongoing process optimization and quality enhancement through regular audits and performance monitoring."
+      }
+    },
+    "services": {
+      "title": "Our Services",
+      "description": "From initial design consultation to final installation, our comprehensive service portfolio ensures your glass projects are delivered with precision, quality, and expertise.",
+      "estimating": {
+        "title": "Estimating",
+        "description": "Comprehensive cost estimation services with value engineering strategies to optimize your project budget while maintaining quality standards.",
+        "details": {
+          "costAnalysis": "Detailed cost analysis and breakdown",
+          "valueEngineering": "Value engineering recommendations",
+          "materialOptimization": "Material optimization strategies",
+          "timelinePlanning": "Timeline and resource planning",
+          "pricingModels": "Competitive pricing models"
+        }
+      },
+      "design": {
+        "title": "Design",
+        "description": "Custom glass solutions and aesthetic engineering tailored to your architectural vision and functional requirements.",
+        "details": {
+          "customSolutions": "Custom glass design solutions",
+          "architecturalConsultation": "Architectural consultation",
+          "modeling": "3D modeling and visualization",
+          "materialSelection": "Material selection guidance",
+          "optimization": "Aesthetic and functional optimization"
+        }
+      },
+      "manufacturing": {
+        "title": "Manufacturing",
+        "description": "State-of-the-art in-house production using high-end technology, specifically adapted to African climate conditions and requirements.",
+        "details": {
+          "advancedTechnology": "Advanced manufacturing technology",
+          "climateAdapted": "Climate-adapted production processes",
+          "qualityControl": "Quality control at every stage",
+          "flexibleProduction": "Flexible production capabilities",
+          "rapidPrototyping": "Rapid prototyping and testing"
+        }
+      },
+      "installation": {
+        "title": "Installation",
+        "description": "Certified experts ensure quality, safety, and precision in every installation project, from planning to completion.",
+        "details": {
+          "certifiedProfessionals": "Certified installation professionals",
+          "safetyFirst": "Safety-first approach",
+          "precisionTechniques": "Precision installation techniques",
+          "projectManagement": "Project management and coordination",
+          "postInstallation": "Post-installation support and maintenance"
+        }
+      }
+    },
+    "serviceProcess": {
+      "title": "Our Service Process",
+      "description": "From initial consultation to final installation, we provide end-to-end support for all your glass manufacturing needs."
+    }
+  },
+  "companyOverview": {
+    "aboutVitrosak": "About VITROSAK",
+    "leadingGlass": "Leading Glass Manufacturing",
+    "excellenceInAlgeria": "Excellence in Algeria",
+    "description1": "VITROSAK, founded in 2004 and located in Sétif, Algeria, is a major producer of automotive, decorative, and architectural glass. With a facility of over 15,000 m², including 4,500 m² production area, the company provides high-performance glass for mass production and customized projects.",
+    "description2": "We serve both domestic and international markets with our commitment to quality, innovation, and customer satisfaction. Our state-of-the-art manufacturing capabilities are specially adapted to the African climate and market demands.",
+    "established": "Established",
+    "location": "Location",
+    "facilitySize": "Facility Size",
+    "productionArea": "Production Area",
+    "certifiedQuality": "Certified Quality"
+  },
+  "stats": {
+    "byTheNumbers": "By the Numbers",
+    "commitmentDescription": "Our commitment to excellence is reflected in our capabilities and achievements",
+    "squareMeters": "Square Meters",
+    "totalFacilityArea": "Total facility area",
+    "productionArea": "Production Area",
+    "manufacturingSpace": "Manufacturing space",
+    "countries": "Countries",
+    "internationalPresence": "International presence",
+    "years": "Years",
+    "industryExperience": "Industry experience"
+  },
+  "productHero": {
+    "completeProductRange": "Complete Product Range",
+    "premiumGlass": "Premium Glass",
+    "manufacturing": "Manufacturing",
+    "description": "From architectural marvels to automotive precision, discover our comprehensive range of high-performance glass solutions engineered for excellence and adapted to demanding environments.",
+    "iso9001Certified": "ISO 9001 Certified",
+    "iso9001Description": "Quality management systems ensuring consistent excellence",
+    "internationalStandards": "International Standards",
+    "internationalStandardsDescription": "Meeting global quality requirements and safety standards",
+    "customSolutions": "Custom Solutions",
+    "customSolutionsDescription": "Tailored products for specific applications and requirements"
+  },
+  "productSection": {
+    "keyFeatures": "Key Features:",
+    "applications": "Applications:",
+    "specifications": "Specifications:"
+  },
+  "serviceCard": {
+    "whatsIncluded": "What's Included:"
+  },
+  "gallery": {
+    "projectGallery": "Project Gallery",
+    "ourWork": "Our Work",
+    "inAction": "In Action",
+    "description": "Explore our portfolio of completed projects showcasing architectural glass, custom designs, and innovative solutions across Algeria.",
+    "featuredProjects": "Featured Projects",
+    "featuredDescription": "A selection of our finest work in architectural glass, custom installations, and innovative glass solutions.",
+    "wantToFeature": "Want to Feature Your Project?",
+    "wantToFeatureDescription": "If you have a project featuring VITROSAK glass solutions that you'd like to showcase, we'd love to hear from you and potentially include it in our gallery.",
+    "submitProjectPhotos": "Submit Project Photos",
+    "categories": {
+      "architectural": "Architectural",
+      "customDesign": "Custom Design",
+      "officeSolutions": "Office Solutions",
+      "residential": "Residential",
+      "bathroomSolutions": "Bathroom Solutions",
+      "commercial": "Commercial",
+      "majorProjects": "Major Projects"
+    },
+    "titles": {
+      "modernGlassStaircase": "Modern Glass Staircase",
+      "curvedGlassDoor": "Curved Glass Door",
+      "commercialGlassPartitions": "Commercial Glass Partitions",
+      "structuralGlassFlooring": "Structural Glass Flooring",
+      "decorativeGlassDoor": "Decorative Glass Door",
+      "glassShowerEnclosures": "Glass Shower Enclosures",
+      "decorativeGlassPanel": "Decorative Glass Panel",
+      "buildingFacade": "Building Facade with Glass Balustrades",
+      "curvedShowerEnclosure": "Curved Shower Enclosure",
+      "officeGlassPartitions": "Office Glass Partitions",
+      "glassStaircaseRailing": "Glass Staircase Railing",
+      "refrigeratedDisplayCase": "Refrigerated Display Case",
+      "royalTulipHotel": "Royal Tulip Hotel Skikda"
+    }
+  },
+  "internationalReach": {
+    "marketPresence": "Market Presence",
+    "nationalAndInternational": "National and International",
+    "presence": "Presence",
+    "description": "Thanks to our reputation and dedication to quality, VITROSAK has expanded its reach beyond our headquarters in Sétif, with a showroom in Oran and proudly exporting to international partners in Tunisia and Mauritania.",
+    "setifAlgeria": "Sétif, Algeria",
+    "headquartersProduction": "Headquarters & Production Facility",
+    "birElDjirOran": "Bir El Djir, Oran, Algeria",
+    "showroomCommercial": "Showroom & Commercial Site",
+    "tunisia": "Tunisia",
+    "mauritania": "Mauritania",
+    "exportMarket": "Export Market"
+  },
+  "partners": {
+    "strategicPartnerships": "Strategic Partnerships",
+    "trustedByLeaders": "Trusted by Industry Leaders",
+    "description": "We collaborate with leading companies and organizations to deliver exceptional glass solutions across various industries and applications.",
+    "collaborativeApproach": "Collaborative Approach",
+    "collaborativeDescription": "Working closely with partners to understand unique requirements and deliver tailored solutions.",
+    "industryExpertise": "Industry Expertise",
+    "industryExpertiseDescription": "Deep understanding of various sectors including automotive, construction, and industrial applications.",
+    "longTermRelationships": "Long-term Relationships",
+    "longTermDescription": "Building lasting partnerships based on trust, quality, and mutual success in the marketplace."
+  },
+  "serviceHero": {
+    "professionalServices": "Professional Services",
+    "completeGlass": "Complete Glass",
+    "solutions": "Solutions",
+    "description": "From initial design consultation to final installation, our comprehensive service portfolio ensures your glass projects are delivered with precision, quality, and expertise.",
+    "expertConsultation": "Expert Consultation",
+    "expertConsultationDescription": "Professional guidance throughout your project lifecycle",
+    "certifiedTeam": "Certified Team",
+    "certifiedTeamDescription": "Skilled professionals with extensive industry experience",
+    "endToEndSupport": "End-to-End Support",
+    "endToEndSupportDescription": "Complete service from design to installation and beyond"
+  }
+}
+

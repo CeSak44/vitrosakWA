@@ -1,0 +1,387 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "about": "À propos",
+    "gallery": "Galerie",
+    "contactUs": "Contactez-nous",
+    "language": "Langue"
+  },
+  "contact": {
+    "guedjelSetif": "Guedjel, Sétif",
+    "birElDjirOran": "Bir El Djir, Oran",
+    "viewOnGoogleMaps": "Voir sur Google Maps",
+    "address": "75 route de batna ouled boudhil guedjel, Sétif",
+    "showroom": "Showroom & Site Commercial"
+  },
+  "footer": {
+    "description": "Entreprise algérienne leader spécialisée dans la fabrication et la transformation de verre plat depuis 2004.",
+    "copyright": "© 2024 VITROSAK. Tous droits réservés. | Excellence Algérienne dans la Fabrication de Verre"
+  },
+  "home": {
+    "hero": {
+      "title1": "Usine de Transformation du Verre",
+      "subtitle1": "Producteur de verre pour l'automobile, l'architecture et les appareils ménagers.",
+      "title2": "Spécialistes des Autobus et Machines Lourdes",
+      "subtitle2": "VITROSAK est la première usine de la région à fabriquer entièrement le verre et les pare-brise pour les autobus et les machines de construction lourdes, combinant l'expertise étrangère avec une production locale de qualité supérieure.",
+      "exploreProducts": "Explorer les Produits",
+      "viewProjects": "Voir les Projets"
+    },
+    "products": {
+      "temperedGlass": "Verre Trempé",
+      "CurtainWall": "Verre de Vitrage",
+      "laminatedGlass": "Verre Feuilleté",
+      "busesHeavyMachinery": "Pare-brise et Verres de Fenêtre pour Autobus et Machines de Construction Lourdes",
+      "homeAppliances": "Verre pour Appareils Ménagers",
+      "availableFlatCurved": "Disponible en configurations plates et incurvées",
+      "availableDoubleTriple": "Disponible en systèmes de double et triple vitrage",
+      "flatTempered": "Verre Trempé Plat",
+      "curvedTempered": "Verre Trempé Courbe",
+      "doubleGlazing": "Double Vitrage",
+      "tripleGlazing": "Triple Vitrage",
+      "shopfronts": "Vitrines",
+      "showerEnclosures": "Cabinets de Douche",
+      "staircases": "Escaliers",
+      "balustrades": "Balustrades",
+      "architecturalFeatures": "Caractéristiques Architecturales",
+      "customDesigns": "Designs Personnalisés",
+      "buildingFacades": "Façades de Bâtiments",
+      "refrigeratorDoors": "Portes de Réfrigérateur",
+      "energyEfficiency": "Efficacité Énergétique",
+      "noiseReduction": "Réduction du Bruit",
+      "highPerformanceBuildings": "Bâtiments Haute Performance",
+      "extremeClimateControl": "Contrôle Climatique Extrême",
+      "hotels": "Hôtels",
+      "bankCounters": "Comptoirs Bancaires",
+      "skylights": "Lucioles",
+      "glassFlooring": "Plancher en Verre",
+      "buses": "Autobus",
+      "heavyConstructionMachinery": "Machines de Construction Lourdes",
+      "largeVehicleWindshields": "Pare-brise de Grands Véhicules",
+      "industrialApplications": "Applications Industrielles",
+      "refrigerators": "Réfrigérateurs",
+      "ovens": "Fours",
+      "cooktops": "Tables de Cuisson",
+      "householdEquipment": "Équipement Ménager",
+      "viewCompleteRange": "Voir la Gamme Complète de Produits",
+      "applications": "APPLICATIONS:"
+    }
+  ,
+    "productCatalog": {
+      "badge": "Gamme de Produits",
+      "sectionTitle": "Solutions Complètes en Verre",
+      "intro": "Des merveilles architecturales à la précision automobile, notre catalogue diversifié répond à tous les besoins de fabrication de verre avec une qualité sans compromis.",
+      "sinceLine": "Depuis 2004 • Excellence Algérienne du Verre"
+    }
+  },
+  "products": {
+    "temperedGlass": {
+      "title": "Verre Trempé",
+      "subtitle": "Solutions de Sécurité Haute Résistance",
+      "attributes": {
+        "highStrength": "Sécurité haute résistance",
+        "impactResistant": "Résistant aux chocs",
+        "variousDimensions": "Dimensions variées disponibles",
+        "safetyStandards": "Conforme aux normes de verre de sécurité"
+      },
+      "specs": {
+        "thicknessRange": "Gamme d'Épaisseur",
+        "maximumSize": "Taille Maximale",
+        "minimumSize": "Taille Minimale",
+        "edgeTypes": "Types de Bords"
+      },
+      "edgeTypesValue": "Polis, Meulés, Biseautés"
+    },
+    "glazingGlass": {
+      "title": "Verre de Vitrage",
+      "subtitle": "Solutions Thermiques Écoénergétiques",
+      "attributes": {
+        "thermalInsulation": "Isolation thermique",
+        "energyEfficiency": "Efficacité énergétique",
+        "noiseReduction": "Réduction du bruit",
+        "condensationControl": "Contrôle de la condensation"
+      },
+      "specs": {
+        "glassTypes": "Types de Verre",
+        "airGap": "Espace d'Air",
+        "thermalPerformance": "Performance Thermique",
+        "applications": "Applications"
+      },
+      "glassTypesValue": "Systèmes VEC, VEP",
+      "thermalPerformanceValue": "Revêtements Low-E disponibles",
+      "applicationsValue": "Commercial & Résidentiel"
+    },
+    "laminatedGlass": {
+      "title": "Verre Feuilleté",
+      "subtitle": "Verre de Sécurité Résistant aux Chocs",
+      "attributes": {
+        "impactResistant": "Résistance aux chocs",
+        "uvProtection": "Protection UV",
+        "antiShatter": "Propriétés anti-éclatement",
+        "soundInsulation": "Isolation acoustique"
+      },
+      "specs": {
+        "thicknessRange": "Gamme d'Épaisseur",
+        "maximumSize": "Taille Maximale",
+        "securityLevels": "Niveaux de Sécurité",
+        "interlayerTypes": "Types de Feuille Intercalaire"
+      },
+      "securityLevelsValue": "Anti-balles, Anti-effraction",
+      "interlayerTypesValue": "PVB, EVA, SGP"
+    },
+    "busesHeavyMachinery": {
+      "title": "Pare-brise et Verres de Fenêtre pour Autobus et Machines de Construction Lourdes",
+      "subtitle": "Spécialistes du Vitrage de Véhicules Lourds",
+      "attributes": {
+        "oemQuality": "Normes de qualité OEM",
+        "largeVehicleSpecialists": "Spécialistes des grands véhicules",
+        "curvedFlatDesigns": "Designs courbes et plats",
+        "climateAdapted": "Adapté au climat"
+      },
+      "specs": {
+        "vehicleTypes": "Types de Véhicules",
+        "glassTypes": "Types de Verre",
+        "specialFeatures": "Caractéristiques Spéciales",
+        "quality": "Qualité"
+      },
+      "vehicleTypesValue": "Autobus, Équipement Lourd, Machines de Construction",
+      "glassTypesValue": "Pare-brise, Latéral, Arrière",
+      "specialFeaturesValue": "Premier fabricant régional",
+      "qualityValue": "Normes automobiles internationales"
+    },
+    "homeAppliances": {
+      "title": "Verre pour Appareils Ménagers",
+      "subtitle": "Solutions d'Équipement Ménager",
+      "attributes": {
+        "temperatureResistant": "Résistant à la température",
+        "applianceSpecific": "Designs spécifiques aux appareils",
+        "highClarity": "Haute clarté",
+        "safetyCertified": "Certifié sécurité"
+      },
+      "specs": {
+        "applications": "Applications",
+        "temperatureResistance": "Résistance à la Température",
+        "customization": "Personnalisation",
+        "standards": "Normes"
+      },
+      "applicationsValue": "Cuisine & Appareils Ménagers",
+      "temperatureResistanceValue": "Options traitées à la chaleur",
+      "customizationValue": "Fait sur mesure",
+      "standardsValue": "Conformité de l'industrie des appareils"
+    }
+  },
+  "about": {
+    "qualityAssurance": "Assurance Qualité",
+    "iso9001": "ISO 9001",
+    "certifiedExcellence": "Excellence Certifiée",
+    "qualityCommitment": "Notre engagement envers la qualité est validé par la certification ISO 9001, garantissant que chaque produit répond aux normes internationales les plus élevées en matière de gestion de la qualité.",
+    "internationalStandard": "Norme Internationale",
+    "certificationImportance": "Importance de la Certification",
+    "certificationBenefits": {
+      "enhancedQuality": "Amélioration de la qualité et de la fiabilité des produits",
+      "customerSatisfaction": "Amélioration de la satisfaction et de la confiance des clients",
+      "streamlinedProcesses": "Processus opérationnels rationalisés",
+      "marketAccess": "Accès au marché international et crédibilité",
+      "riskManagement": "Gestion des risques et assurance qualité",
+      "competitiveAdvantage": "Avantage concurrentiel sur le marché"
+    },
+    "certificateDetails": {
+      "certifiedCompany": "Entreprise Certifiée",
+      "standard": "Norme",
+      "scope": "Portée"
+    },
+    "certificateDetailsValues": {
+      "company": "SARL VITROSAK",
+      "standard": "ISO 9001:2015",
+      "scope": "Fabrication & Transformation du Verre"
+    },
+    "qualityManagementSystem": "Notre Système de Gestion de la Qualité",
+    "qualitySystemDescription": "La certification ISO 9001 garantit que chaque aspect de notre fonctionnement est conçu pour offrir une qualité constante et une satisfaction client.",
+    "qualityFeatures": {
+      "qms": {
+        "title": "Système de Gestion de la Qualité",
+        "description": "QMS complet garantissant une qualité de produit constante et une satisfaction client dans toutes les opérations."
+      },
+      "customerRequirements": {
+        "title": "Exigences Clients",
+        "description": "Approche systématique pour comprendre, documenter et répondre constamment aux attentes et spécifications des clients."
+      },
+      "regulatoryCompliance": {
+        "title": "Conformité Réglementaire",
+        "description": "Conformité totale aux normes internationales et aux exigences réglementaires locales pour tous nos produits."
+      },
+      "continuousImprovement": {
+        "title": "Amélioration Continue",
+        "description": "Optimisation continue des processus et amélioration de la qualité grâce à des audits réguliers et au suivi des performances."
+      }
+    },
+    "services": {
+      "title": "Nos Services",
+      "description": "De la consultation initiale en design à l'installation finale, notre portefeuille de services complet garantit que vos projets de verre sont livrés avec précision, qualité et expertise.",
+      "estimating": {
+        "title": "Estimation",
+        "description": "Services d'estimation de coûts complets avec stratégies d'ingénierie de la valeur pour optimiser le budget de votre projet tout en maintenant les normes de qualité.",
+        "details": {
+          "costAnalysis": "Analyse et répartition détaillées des coûts",
+          "valueEngineering": "Recommandations d'ingénierie de la valeur",
+          "materialOptimization": "Stratégies d'optimisation des matériaux",
+          "timelinePlanning": "Planification des délais et des ressources",
+          "pricingModels": "Modèles de tarification compétitifs"
+        }
+      },
+      "design": {
+        "title": "Design",
+        "description": "Solutions de verre personnalisées et ingénierie esthétique adaptées à votre vision architecturale et à vos exigences fonctionnelles.",
+        "details": {
+          "customSolutions": "Solutions de design de verre personnalisées",
+          "architecturalConsultation": "Consultation architecturale",
+          "modeling": "Modélisation et visualisation 3D",
+          "materialSelection": "Conseils en sélection de matériaux",
+          "optimization": "Optimisation esthétique et fonctionnelle"
+        }
+      },
+      "manufacturing": {
+        "title": "Fabrication",
+        "description": "Production interne de pointe utilisant une technologie haut de gamme, spécifiquement adaptée aux conditions climatiques et aux exigences africaines.",
+        "details": {
+          "advancedTechnology": "Technologie de fabrication avancée",
+          "climateAdapted": "Processus de production adaptés au climat",
+          "qualityControl": "Contrôle qualité à chaque étape",
+          "flexibleProduction": "Capacités de production flexibles",
+          "rapidPrototyping": "Prototypage et tests rapides"
+        }
+      },
+      "installation": {
+        "title": "Installation",
+        "description": "Des experts certifiés garantissent la qualité, la sécurité et la précision dans chaque projet d'installation, de la planification à la finalisation.",
+        "details": {
+          "certifiedProfessionals": "Professionnels d'installation certifiés",
+          "safetyFirst": "Approche sécurité d'abord",
+          "precisionTechniques": "Techniques d'installation de précision",
+          "projectManagement": "Gestion et coordination de projet",
+          "postInstallation": "Support et maintenance post-installation"
+        }
+      }
+    },
+    "serviceProcess": {
+      "title": "Notre Processus de Service",
+      "description": "De la consultation initiale à l'installation finale, nous fournissons un support de bout en bout pour tous vos besoins de fabrication de verre."
+    }
+  },
+  "companyOverview": {
+    "aboutVitrosak": "À propos de VITROSAK",
+    "leadingGlass": "Fabrication de Verre Leader",
+    "excellenceInAlgeria": "Excellence en Algérie",
+    "description1": "VITROSAK, fondée en 2004 et située à Sétif, Algérie, est un producteur majeur de verre automobile, décoratif et architectural. Avec une installation de plus de 15 000 m², dont 4 500 m² de zone de production, l'entreprise fournit du verre haute performance pour la production de masse et les projets personnalisés.",
+    "description2": "Nous servons les marchés nationaux et internationaux avec notre engagement envers la qualité, l'innovation et la satisfaction client. Nos capacités de fabrication de pointe sont spécialement adaptées au climat africain et aux exigences du marché.",
+    "established": "Établie",
+    "location": "Localisation",
+    "facilitySize": "Taille de l'Installation",
+    "productionArea": "Zone de Production",
+    "certifiedQuality": "Qualité Certifiée"
+  },
+  "stats": {
+    "byTheNumbers": "En Chiffres",
+    "commitmentDescription": "Notre engagement envers l'excellence se reflète dans nos capacités et nos réalisations",
+    "squareMeters": "Mètres Carrés",
+    "totalFacilityArea": "Superficie totale de l'installation",
+    "productionArea": "Zone de Production",
+    "manufacturingSpace": "Espace de fabrication",
+    "countries": "Pays",
+    "internationalPresence": "Présence internationale",
+    "years": "Années",
+    "industryExperience": "Expérience dans l'industrie"
+  },
+  "productHero": {
+    "completeProductRange": "Gamme Complète de Produits",
+    "premiumGlass": "Verre Premium",
+    "manufacturing": "Fabrication",
+    "description": "Des merveilles architecturales à la précision automobile, découvrez notre gamme complète de solutions de verre haute performance conçues pour l'excellence et adaptées aux environnements exigeants.",
+    "iso9001Certified": "Certifié ISO 9001",
+    "iso9001Description": "Systèmes de gestion de la qualité garantissant une excellence constante",
+    "internationalStandards": "Normes Internationales",
+    "internationalStandardsDescription": "Répondre aux exigences de qualité mondiales et aux normes de sécurité",
+    "customSolutions": "Solutions Personnalisées",
+    "customSolutionsDescription": "Produits sur mesure pour des applications et exigences spécifiques"
+  },
+  "productSection": {
+    "keyFeatures": "Caractéristiques Clés:",
+    "applications": "Applications:",
+    "specifications": "Spécifications:"
+  },
+  "serviceCard": {
+    "whatsIncluded": "Ce qui est Inclus:"
+  },
+  "gallery": {
+    "projectGallery": "Galerie de Projets",
+    "ourWork": "Notre Travail",
+    "inAction": "En Action",
+    "description": "Explorez notre portefeuille de projets terminés présentant du verre architectural, des designs personnalisés et des solutions innovantes à travers l'Algérie.",
+    "featuredProjects": "Projets en Vedette",
+    "featuredDescription": "Une sélection de nos meilleurs travaux en verre architectural, installations personnalisées et solutions de verre innovantes.",
+    "wantToFeature": "Voulez-vous Présenter Votre Projet?",
+    "wantToFeatureDescription": "Si vous avez un projet mettant en vedette des solutions de verre VITROSAK que vous aimeriez présenter, nous serions ravis de vous entendre et de l'inclure potentiellement dans notre galerie.",
+    "submitProjectPhotos": "Soumettre des Photos de Projet",
+    "categories": {
+      "architectural": "Architectural",
+      "customDesign": "Design Personnalisé",
+      "officeSolutions": "Solutions de Bureau",
+      "residential": "Résidentiel",
+      "bathroomSolutions": "Solutions de Salle de Bain",
+      "commercial": "Commercial",
+      "majorProjects": "Projets Majeurs"
+    },
+    "titles": {
+      "modernGlassStaircase": "Escalier en Verre Moderne",
+      "curvedGlassDoor": "Porte en Verre Courbe",
+      "commercialGlassPartitions": "Cloisons en Verre Commerciales",
+      "structuralGlassFlooring": "Plancher en Verre Structurel",
+      "decorativeGlassDoor": "Porte en Verre Décorative",
+      "glassShowerEnclosures": "Cabinets de Douche en Verre",
+      "decorativeGlassPanel": "Panneau en Verre Décoratif",
+      "buildingFacade": "Façade de Bâtiment avec Balustrades en Verre",
+      "curvedShowerEnclosure": "Cabinet de Douche Courbe",
+      "officeGlassPartitions": "Cloisons en Verre de Bureau",
+      "glassStaircaseRailing": "Garde-Corps d'Escalier en Verre",
+      "refrigeratedDisplayCase": "Vitrine Réfrigérée",
+      "royalTulipHotel": "Hôtel Royal Tulip Skikda"
+    }
+  },
+  "internationalReach": {
+    "marketPresence": "Présence sur le Marché",
+    "nationalAndInternational": "Présence Nationale et Internationale",
+    "presence": "Présence",
+    "description": "Grâce à notre réputation et notre dévouement à la qualité, VITROSAK a étendu sa portée au-delà de notre siège social à Sétif, avec un showroom à Oran et exportant fièrement vers des partenaires internationaux en Tunisie et en Mauritanie.",
+    "setifAlgeria": "Sétif, Algérie",
+    "headquartersProduction": "Siège Social & Installation de Production",
+    "birElDjirOran": "Bir El Djir, Oran, Algérie",
+    "showroomCommercial": "Showroom & Site Commercial",
+    "tunisia": "Tunisie",
+    "mauritania": "Mauritanie",
+    "exportMarket": "Marché d'Exportation"
+  },
+  "partners": {
+    "strategicPartnerships": "Partenariats Stratégiques",
+    "trustedByLeaders": "Approuvé par les Leaders de l'Industrie",
+    "description": "Nous collaborons avec des entreprises et organisations de premier plan pour fournir des solutions de verre exceptionnelles dans diverses industries et applications.",
+    "collaborativeApproach": "Approche Collaborative",
+    "collaborativeDescription": "Travailler en étroite collaboration avec les partenaires pour comprendre les exigences uniques et fournir des solutions sur mesure.",
+    "industryExpertise": "Expertise Industrielle",
+    "industryExpertiseDescription": "Compréhension approfondie de divers secteurs, notamment l'automobile, la construction et les applications industrielles.",
+    "longTermRelationships": "Relations à Long Terme",
+    "longTermDescription": "Construire des partenariats durables basés sur la confiance, la qualité et le succès mutuel sur le marché."
+  },
+  "serviceHero": {
+    "professionalServices": "Services Professionnels",
+    "completeGlass": "Solutions de Verre",
+    "solutions": "Complètes",
+    "description": "De la consultation initiale en design à l'installation finale, notre portefeuille de services complet garantit que vos projets de verre sont livrés avec précision, qualité et expertise.",
+    "expertConsultation": "Consultation d'Experts",
+    "expertConsultationDescription": "Conseils professionnels tout au long du cycle de vie de votre projet",
+    "certifiedTeam": "Équipe Certifiée",
+    "certifiedTeamDescription": "Professionnels qualifiés avec une vaste expérience dans l'industrie",
+    "endToEndSupport": "Support de Bout en Bout",
+    "endToEndSupportDescription": "Service complet de la conception à l'installation et au-delà"
+  }
+}
+

@@ -1,0 +1,387 @@
+{
+  "nav": {
+    "home": "首页",
+    "products": "产品",
+    "about": "关于我们",
+    "gallery": "图库",
+    "contactUs": "联系我们",
+    "language": "语言"
+  },
+  "contact": {
+    "guedjelSetif": "盖杰勒，塞提夫",
+    "birElDjirOran": "比尔埃尔吉尔，奥兰",
+    "viewOnGoogleMaps": "在谷歌地图上查看",
+    "address": "75 route de batna ouled boudhil guedjel, Sétif",
+    "showroom": "展厅和商业场所"
+  },
+  "footer": {
+    "description": "自2004年以来，专注于平板玻璃制造和加工的领先阿尔及利亚公司。",
+    "copyright": "© 2024 VITROSAK。保留所有权利。| 阿尔及利亚玻璃制造卓越"
+  },
+  "home": {
+    "hero": {
+      "title1": "玻璃加工厂",
+      "subtitle1": "汽车、建筑和家用电器玻璃生产商。",
+      "title2": "巴士和重型机械专家",
+      "subtitle2": "VITROSAK是该地区第一家完全制造巴士和重型建筑机械玻璃和挡风玻璃的工厂，结合国外专业知识与顶级本地生产。",
+      "exploreProducts": "探索产品",
+      "viewProjects": "查看项目"
+    },
+    "products": {
+      "temperedGlass": "钢化玻璃",
+      "glazingGlass": "玻璃幕墙",
+      "laminatedGlass": "夹层玻璃",
+      "busesHeavyMachinery": "巴士和重型建筑机械挡风玻璃和窗玻璃",
+      "homeAppliances": "家用电器玻璃",
+      "availableFlatCurved": "提供平面和曲面配置",
+      "availableDoubleTriple": "提供双层和三层玻璃系统",
+      "flatTempered": "平面钢化玻璃",
+      "curvedTempered": "曲面钢化玻璃",
+      "doubleGlazing": "双层玻璃",
+      "tripleGlazing": "三层玻璃",
+      "shopfronts": "店面",
+      "showerEnclosures": "淋浴间",
+      "staircases": "楼梯",
+      "balustrades": "栏杆",
+      "architecturalFeatures": "建筑特色",
+      "customDesigns": "定制设计",
+      "buildingFacades": "建筑立面",
+      "refrigeratorDoors": "冰箱门",
+      "energyEfficiency": "能源效率",
+      "noiseReduction": "降噪",
+      "highPerformanceBuildings": "高性能建筑",
+      "extremeClimateControl": "极端气候控制",
+      "hotels": "酒店",
+      "bankCounters": "银行柜台",
+      "skylights": "天窗",
+      "glassFlooring": "玻璃地板",
+      "buses": "巴士",
+      "heavyConstructionMachinery": "重型建筑机械",
+      "largeVehicleWindshields": "大型车辆挡风玻璃",
+      "industrialApplications": "工业应用",
+      "refrigerators": "冰箱",
+      "ovens": "烤箱",
+      "cooktops": "炉灶",
+      "householdEquipment": "家用设备",
+      "viewCompleteRange": "查看完整产品系列",
+      "applications": "应用："
+    }
+  ,
+    "productCatalog": {
+      "badge": "产品系列",
+      "sectionTitle": "综合玻璃解决方案",
+      "intro": "从建筑奇迹到汽车精密，我们多样的产品目录满足所有玻璃制造需求，质量无可妥协。",
+      "sinceLine": "自2004年 • 阿尔及利亚玻璃卓越"
+    }
+  },
+  "products": {
+    "temperedGlass": {
+      "title": "钢化玻璃",
+      "subtitle": "高强度安全解决方案",
+      "attributes": {
+        "highStrength": "高强度安全性",
+        "impactResistant": "抗冲击",
+        "variousDimensions": "多种尺寸可选",
+        "safetyStandards": "符合安全玻璃标准"
+      },
+      "specs": {
+        "thicknessRange": "厚度范围",
+        "maximumSize": "最大尺寸",
+        "minimumSize": "最小尺寸",
+        "edgeTypes": "边缘类型"
+      },
+      "edgeTypesValue": "抛光、磨削、斜边"
+    },
+    "glazingGlass": {
+      "title": "玻璃窗",
+      "subtitle": "节能热解决方案",
+      "attributes": {
+        "thermalInsulation": "隔热",
+        "energyEfficiency": "能源效率",
+        "noiseReduction": "降噪",
+        "condensationControl": "防冷凝"
+      },
+      "specs": {
+        "glassTypes": "玻璃类型",
+        "airGap": "空气间隙",
+        "thermalPerformance": "热性能",
+        "applications": "应用"
+      },
+      "glassTypesValue": "VEC、VEP系统",
+      "thermalPerformanceValue": "提供Low-E涂层",
+      "applicationsValue": "商业和住宅"
+    },
+    "laminatedGlass": {
+      "title": "夹层玻璃",
+      "subtitle": "抗冲击安全玻璃",
+      "attributes": {
+        "impactResistant": "抗冲击性",
+        "uvProtection": "紫外线防护",
+        "antiShatter": "防破碎特性",
+        "soundInsulation": "隔音"
+      },
+      "specs": {
+        "thicknessRange": "厚度范围",
+        "maximumSize": "最大尺寸",
+        "securityLevels": "安全级别",
+        "interlayerTypes": "夹层类型"
+      },
+      "securityLevelsValue": "防弹、防盗",
+      "interlayerTypesValue": "PVB、EVA、SGP"
+    },
+    "busesHeavyMachinery": {
+      "title": "巴士和重型建筑机械挡风玻璃和窗玻璃",
+      "subtitle": "重型车辆玻璃专家",
+      "attributes": {
+        "oemQuality": "OEM质量标准",
+        "largeVehicleSpecialists": "大型车辆专家",
+        "curvedFlatDesigns": "曲面和平面设计",
+        "climateAdapted": "气候适应"
+      },
+      "specs": {
+        "vehicleTypes": "车辆类型",
+        "glassTypes": "玻璃类型",
+        "specialFeatures": "特殊功能",
+        "quality": "质量"
+      },
+      "vehicleTypesValue": "巴士、重型设备、建筑机械",
+      "glassTypesValue": "挡风玻璃、侧窗、后窗",
+      "specialFeaturesValue": "首个区域制造商",
+      "qualityValue": "国际汽车标准"
+    },
+    "homeAppliances": {
+      "title": "家用电器玻璃",
+      "subtitle": "家用设备解决方案",
+      "attributes": {
+        "temperatureResistant": "耐高温",
+        "applianceSpecific": "特定设备设计",
+        "highClarity": "高清晰度",
+        "safetyCertified": "安全认证"
+      },
+      "specs": {
+        "applications": "应用",
+        "temperatureResistance": "耐温性",
+        "customization": "定制",
+        "standards": "标准"
+      },
+      "applicationsValue": "厨房和家用电器",
+      "temperatureResistanceValue": "热处理选项",
+      "customizationValue": "按规格制造",
+      "standardsValue": "家电行业合规"
+    }
+  },
+  "about": {
+    "qualityAssurance": "质量保证",
+    "iso9001": "ISO 9001",
+    "certifiedExcellence": "认证卓越",
+    "qualityCommitment": "我们对质量的承诺通过ISO 9001认证得到验证，确保每个产品都符合最高的国际质量管理标准。",
+    "internationalStandard": "国际标准",
+    "certificationImportance": "认证重要性",
+    "certificationBenefits": {
+      "enhancedQuality": "增强的产品质量和可靠性",
+      "customerSatisfaction": "提高客户满意度和信任",
+      "streamlinedProcesses": "简化的运营流程",
+      "marketAccess": "国际市场准入和信誉",
+      "riskManagement": "风险管理和质量保证",
+      "competitiveAdvantage": "市场竞争优势"
+    },
+    "certificateDetails": {
+      "certifiedCompany": "认证公司",
+      "standard": "标准",
+      "scope": "范围"
+    },
+    "certificateDetailsValues": {
+      "company": "SARL VITROSAK",
+      "standard": "ISO 9001:2015",
+      "scope": "玻璃制造与加工"
+    },
+    "qualityManagementSystem": "我们的质量管理系统",
+    "qualitySystemDescription": "ISO 9001认证确保我们运营的每个方面都旨在提供一致的质量和客户满意度。",
+    "qualityFeatures": {
+      "qms": {
+        "title": "质量管理系统",
+        "description": "全面的QMS确保所有运营中一致的产品质量和客户满意度。"
+      },
+      "customerRequirements": {
+        "title": "客户要求",
+        "description": "系统化方法，以理解、记录并持续满足客户期望和规格。"
+      },
+      "regulatoryCompliance": {
+        "title": "法规合规",
+        "description": "完全符合我们所有产品的国际标准和当地法规要求。"
+      },
+      "continuousImprovement": {
+        "title": "持续改进",
+        "description": "通过定期审计和性能监控，持续优化流程和提高质量。"
+      }
+    },
+    "services": {
+      "title": "我们的服务",
+      "description": "从初始设计咨询到最终安装，我们全面的服务组合确保您的玻璃项目以精确、质量和专业知识交付。",
+      "estimating": {
+        "title": "估算",
+        "description": "全面的成本估算服务，采用价值工程策略，在保持质量标准的同时优化项目预算。",
+        "details": {
+          "costAnalysis": "详细的成本分析和分解",
+          "valueEngineering": "价值工程建议",
+          "materialOptimization": "材料优化策略",
+          "timelinePlanning": "时间表和资源规划",
+          "pricingModels": "竞争性定价模式"
+        }
+      },
+      "design": {
+        "title": "设计",
+        "description": "定制玻璃解决方案和美学工程，量身定制以满足您的建筑愿景和功能要求。",
+        "details": {
+          "customSolutions": "定制玻璃设计解决方案",
+          "architecturalConsultation": "建筑咨询",
+          "modeling": "3D建模和可视化",
+          "materialSelection": "材料选择指导",
+          "optimization": "美学和功能优化"
+        }
+      },
+      "manufacturing": {
+        "title": "制造",
+        "description": "使用高端技术的最先进内部生产，专门适应非洲气候条件和要求。",
+        "details": {
+          "advancedTechnology": "先进的制造技术",
+          "climateAdapted": "气候适应的生产工艺",
+          "qualityControl": "每个阶段的质控",
+          "flexibleProduction": "灵活的生产能力",
+          "rapidPrototyping": "快速原型制作和测试"
+        }
+      },
+      "installation": {
+        "title": "安装",
+        "description": "认证专家确保每个安装项目的质量、安全和精确，从规划到完成。",
+        "details": {
+          "certifiedProfessionals": "认证安装专业人员",
+          "safetyFirst": "安全第一的方法",
+          "precisionTechniques": "精确安装技术",
+          "projectManagement": "项目管理和协调",
+          "postInstallation": "安装后支持和维护"
+        }
+      }
+    },
+    "serviceProcess": {
+      "title": "我们的服务流程",
+      "description": "从初始咨询到最终安装，我们为您的所有玻璃制造需求提供端到端的支持。"
+    }
+  },
+  "companyOverview": {
+    "aboutVitrosak": "关于VITROSAK",
+    "leadingGlass": "领先的玻璃制造",
+    "excellenceInAlgeria": "阿尔及利亚的卓越",
+    "description1": "VITROSAK成立于2004年，位于阿尔及利亚塞提夫，是汽车、装饰和建筑玻璃的主要生产商。拥有超过15,000平方米的设施，包括4,500平方米的生产区域，公司为大规模生产和定制项目提供高性能玻璃。",
+    "description2": "我们以对质量、创新和客户满意度的承诺服务于国内外市场。我们最先进的制造能力专门适应非洲气候和市场需求。",
+    "established": "成立",
+    "location": "位置",
+    "facilitySize": "设施规模",
+    "productionArea": "生产区域",
+    "certifiedQuality": "认证质量"
+  },
+  "stats": {
+    "byTheNumbers": "数据统计",
+    "commitmentDescription": "我们对卓越的承诺体现在我们的能力和成就中",
+    "squareMeters": "平方米",
+    "totalFacilityArea": "总设施面积",
+    "productionArea": "生产区域",
+    "manufacturingSpace": "制造空间",
+    "countries": "国家",
+    "internationalPresence": "国际存在",
+    "years": "年",
+    "industryExperience": "行业经验"
+  },
+  "productHero": {
+    "completeProductRange": "完整产品系列",
+    "premiumGlass": "优质玻璃",
+    "manufacturing": "制造",
+    "description": "从建筑奇迹到汽车精密，探索我们全面的高性能玻璃解决方案系列，专为卓越而设计，适应苛刻环境。",
+    "iso9001Certified": "ISO 9001认证",
+    "iso9001Description": "质量管理体系确保持续卓越",
+    "internationalStandards": "国际标准",
+    "internationalStandardsDescription": "满足全球质量要求和安全标准",
+    "customSolutions": "定制解决方案",
+    "customSolutionsDescription": "为特定应用和要求量身定制的产品"
+  },
+  "productSection": {
+    "keyFeatures": "主要特点：",
+    "applications": "应用：",
+    "specifications": "规格："
+  },
+  "serviceCard": {
+    "whatsIncluded": "包含内容："
+  },
+  "gallery": {
+    "projectGallery": "项目图库",
+    "ourWork": "我们的作品",
+    "inAction": "实际应用",
+    "description": "探索我们已完成项目的作品集，展示阿尔及利亚各地的建筑玻璃、定制设计和创新解决方案。",
+    "featuredProjects": "精选项目",
+    "featuredDescription": "我们在建筑玻璃、定制安装和创新玻璃解决方案方面的精选作品。",
+    "wantToFeature": "想要展示您的项目？",
+    "wantToFeatureDescription": "如果您有一个展示VITROSAK玻璃解决方案的项目想要展示，我们很乐意听取您的意见，并可能将其纳入我们的图库。",
+    "submitProjectPhotos": "提交项目照片",
+    "categories": {
+      "architectural": "建筑",
+      "customDesign": "定制设计",
+      "officeSolutions": "办公解决方案",
+      "residential": "住宅",
+      "bathroomSolutions": "浴室解决方案",
+      "commercial": "商业",
+      "majorProjects": "重大项目"
+    },
+    "titles": {
+      "modernGlassStaircase": "现代玻璃楼梯",
+      "curvedGlassDoor": "曲面玻璃门",
+      "commercialGlassPartitions": "商业玻璃隔断",
+      "structuralGlassFlooring": "结构玻璃地板",
+      "decorativeGlassDoor": "装饰玻璃门",
+      "glassShowerEnclosures": "玻璃淋浴间",
+      "decorativeGlassPanel": "装饰玻璃板",
+      "buildingFacade": "带玻璃栏杆的建筑立面",
+      "curvedShowerEnclosure": "曲面淋浴间",
+      "officeGlassPartitions": "办公玻璃隔断",
+      "glassStaircaseRailing": "玻璃楼梯栏杆",
+      "refrigeratedDisplayCase": "冷藏展示柜",
+      "royalTulipHotel": "皇家郁金香酒店斯基克达"
+    }
+  },
+  "internationalReach": {
+    "marketPresence": "市场存在",
+    "nationalAndInternational": "国内和国际",
+    "presence": "存在",
+    "description": "由于我们的声誉和对质量的奉献，VITROSAK已将其业务范围扩展到我们在塞提夫的总部之外，在奥兰设有展厅，并自豪地向突尼斯和毛里塔尼亚的国际合作伙伴出口。",
+    "setifAlgeria": "塞提夫，阿尔及利亚",
+    "headquartersProduction": "总部和生产设施",
+    "birElDjirOran": "比尔埃尔吉尔，奥兰，阿尔及利亚",
+    "showroomCommercial": "展厅和商业场所",
+    "tunisia": "突尼斯",
+    "mauritania": "毛里塔尼亚",
+    "exportMarket": "出口市场"
+  },
+  "partners": {
+    "strategicPartnerships": "战略合作伙伴关系",
+    "trustedByLeaders": "受行业领导者信赖",
+    "description": "我们与领先的公司和组织合作，为各个行业和应用提供卓越的玻璃解决方案。",
+    "collaborativeApproach": "协作方法",
+    "collaborativeDescription": "与合作伙伴密切合作，了解独特需求并提供量身定制的解决方案。",
+    "industryExpertise": "行业专业知识",
+    "industryExpertiseDescription": "深入了解包括汽车、建筑和工业应用在内的各个领域。",
+    "longTermRelationships": "长期关系",
+    "longTermDescription": "基于信任、质量和市场共同成功建立持久的合作伙伴关系。"
+  },
+  "serviceHero": {
+    "professionalServices": "专业服务",
+    "completeGlass": "完整玻璃",
+    "solutions": "解决方案",
+    "description": "从初始设计咨询到最终安装，我们的综合服务组合确保您的玻璃项目以精确、质量和专业知识交付。",
+    "expertConsultation": "专家咨询",
+    "expertConsultationDescription": "在您的项目生命周期中提供专业指导",
+    "certifiedTeam": "认证团队",
+    "certifiedTeamDescription": "具有丰富行业经验的专业人员",
+    "endToEndSupport": "端到端支持",
+    "endToEndSupportDescription": "从设计到安装及以后的完整服务"
+  }
+}
+
