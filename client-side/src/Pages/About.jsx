@@ -103,6 +103,7 @@ export default function About() {
   return (
     <div className="min-h-screen bg-white">
       <CompanyOverview />
+      
       <StatsSection />
 
       {/* ISO 9001 Quality Section */}

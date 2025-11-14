@@ -30,7 +30,10 @@ export default function ProductCatalog() {
       color: "from-blue-500 to-blue-600",
       images: [
         "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6873cd222107ad5ca60f82e3/8625388f3_fasade.jpeg",
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "/Curtain Wall/photo_2025-11-14 18.21.43.jpeg",
+        "/Curtain Wall/photo_2025-11-14 18.21.50.jpeg",
+        "/Curtain Wall/photo_2025-11-14 18.21.54.jpeg"
       ]
     },
     {

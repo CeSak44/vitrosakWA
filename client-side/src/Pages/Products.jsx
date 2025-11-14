@@ -1,7 +1,7 @@
 
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Building, Car, Shield, Thermometer } from "lucide-react";
+import { Building, Car, Shield, Thermometer, Wrench } from "lucide-react";
 
 import ProductHero from "../Components/products/ProductHero";
 import ProductSection from "../Components/products/ProductSection";
@@ -36,6 +36,35 @@ export default function Products() {
       color: "from-blue-500 to-blue-600"
     },
     {
+      id: "glass-accessories",
+      icon: Wrench,
+      title: t("products.glassAccessories.title"),
+      subtitle: t("products.glassAccessories.subtitle"),
+      types: [t("products.glassAccessories.types.hardware"), t("products.glassAccessories.types.fittings")],
+      uses: [t("home.products.shopfronts"), t("home.products.showerEnclosures"), t("home.products.staircases"), t("home.products.balustrades"), t("home.products.architecturalFeatures"), t("home.products.customDesigns")],
+      attributes: [
+        t("products.glassAccessories.attributes.versatility"),
+        t("products.glassAccessories.attributes.highQualityMaterials"),
+        t("products.glassAccessories.attributes.aestheticAppeal"),
+        t("products.glassAccessories.attributes.easyInstallation")
+      ],
+      specifications: {
+        [t("products.glassAccessories.specs.materials")]: t("products.glassAccessories.materialsValue"),
+        [t("products.glassAccessories.specs.finishOptions")]: t("products.glassAccessories.finishOptionsValue"),
+        [t("products.glassAccessories.specs.compatibility")]: t("products.glassAccessories.compatibilityValue"),
+        [t("products.glassAccessories.specs.loadCapacity")]: t("products.glassAccessories.loadCapacityValue")
+      },
+      images: [
+        "/Accessories/Gemini_Generated_Image_e3dzoqe3dzoqe3dz.png",
+        "/Accessories/Gemini_Generated_Image_o3q6huo3q6huo3q6.png",
+        "/Accessories/Image générée par Gemini (1).png",
+        "/Accessories/Image générée par Gemini.png",
+        "/Accessories/Image générée Gemini (1).png"
+      ],
+      color: "from-blue-500 to-blue-600",
+      catalogueUrl: "/catalogue accessoire fini_251109_152122.pdf"
+    },
+    {
       id: "glazing-glass",
       icon: Thermometer,
       title: t("products.glazingGlass.title"),
@@ -56,7 +85,10 @@ export default function Products() {
       },
       images: [
         "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6873cd222107ad5ca60f82e3/8625388f3_fasade.jpeg",
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "/Curtain Wall/photo_2025-11-14 18.21.43.jpeg",
+        "/Curtain Wall/photo_2025-11-14 18.21.50.jpeg",
+        "/Curtain Wall/photo_2025-11-14 18.21.54.jpeg"
       ],
       color: "from-blue-500 to-blue-600"
     },
@@ -147,9 +179,33 @@ export default function Products() {
 
   return (
     <div className="min-h-screen bg-white">
-      <ProductHero />
+      {/* Desktop Hero */}
+      <div className="hidden lg:block">
+        <ProductHero />
+      </div>
       
-      <div className="py-20">
+      {/* Desktop Layout */}
+      <div className="hidden lg:block py-20">
+        {products.map((product, index) => (
+          <ProductSection
+            key={product.id}
+            product={product}
+            isReversed={index % 2 === 1}
+          />
+        ))}
+      </div>
+
+      {/* Mobile Layout with Scroll Snap */}
+      <div 
+        className="lg:hidden overflow-y-scroll"
+        style={{
+          scrollSnapType: 'y mandatory',
+          WebkitOverflowScrolling: 'touch',
+          scrollBehavior: 'smooth',
+          height: '100vh',
+          position: 'relative'
+        }}
+      >
         {products.map((product, index) => (
           <ProductSection
             key={product.id}

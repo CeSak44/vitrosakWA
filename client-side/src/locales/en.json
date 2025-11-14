@@ -92,6 +92,30 @@
       },
       "edgeTypesValue": "Polished, Ground, Beveled"
     },
+    "glassAccessories": {
+      "title": "Glass Accessories",
+      "subtitle": "Premium Hardware & Fittings",
+      "types": {
+        "hardware": "Hardware Components",
+        "fittings": "Glass Fittings"
+      },
+      "attributes": {
+        "versatility": "Versatile design for wide range of installations",
+        "highQualityMaterials": "Premium stainless steel and brass materials",
+        "aestheticAppeal": "Sleek and modern aesthetic designs",
+        "easyInstallation": "Engineered for straightforward installation"
+      },
+      "specs": {
+        "materials": "Materials",
+        "finishOptions": "Finish Options",
+        "compatibility": "Glass Compatibility",
+        "loadCapacity": "Load Capacity"
+      },
+      "materialsValue": "Stainless Steel (304/316), Brass",
+      "finishOptionsValue": "Polished, Brushed, Matte",
+      "compatibilityValue": "8mm - 12mm glass thickness",
+      "loadCapacityValue": "Up to 100kg per panel"
+    },
     "glazingGlass": {
       "title": "Curtain Wall",
       "subtitle": "Energy-Efficient Thermal Solutions",
@@ -307,7 +331,8 @@
   "productSection": {
     "keyFeatures": "Key Features:",
     "applications": "Applications:",
-    "specifications": "Specifications:"
+    "specifications": "Specifications:",
+    "downloadCatalogue": "Download Catalogue"
   },
   "serviceCard": {
     "whatsIncluded": "What's Included:"

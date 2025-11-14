@@ -92,6 +92,30 @@
       },
       "edgeTypesValue": "Polis, Meulés, Biseautés"
     },
+    "glassAccessories": {
+      "title": "Accessoires de Verre",
+      "subtitle": "Quincaillerie et Accessoires Premium",
+      "types": {
+        "hardware": "Composants de Quincaillerie",
+        "fittings": "Accessoires de Verre"
+      },
+      "attributes": {
+        "versatility": "Design polyvalent pour une large gamme d'installations",
+        "highQualityMaterials": "Matériaux premium en acier inoxydable et laiton",
+        "aestheticAppeal": "Designs esthétiques élégants et modernes",
+        "easyInstallation": "Conçu pour une installation simple"
+      },
+      "specs": {
+        "materials": "Matériaux",
+        "finishOptions": "Options de Finition",
+        "compatibility": "Compatibilité Verre",
+        "loadCapacity": "Capacité de Charge"
+      },
+      "materialsValue": "Acier Inoxydable (304/316), Laiton",
+      "finishOptionsValue": "Poli, Brossé, Mat",
+      "compatibilityValue": "Épaisseur de verre 8mm - 12mm",
+      "loadCapacityValue": "Jusqu'à 100kg par panneau"
+    },
     "glazingGlass": {
       "title": "Verre de Vitrage",
       "subtitle": "Solutions Thermiques Écoénergétiques",
@@ -307,7 +331,8 @@
   "productSection": {
     "keyFeatures": "Caractéristiques Clés:",
     "applications": "Applications:",
-    "specifications": "Spécifications:"
+    "specifications": "Spécifications:",
+    "downloadCatalogue": "Télécharger le Catalogue"
   },
   "serviceCard": {
     "whatsIncluded": "Ce qui est Inclus:"

@@ -92,6 +92,30 @@
       },
       "edgeTypesValue": "抛光、磨削、斜边"
     },
+    "glassAccessories": {
+      "title": "玻璃配件",
+      "subtitle": "优质五金和配件",
+      "types": {
+        "hardware": "五金组件",
+        "fittings": "玻璃配件"
+      },
+      "attributes": {
+        "versatility": "适用于各种安装的多功能设计",
+        "highQualityMaterials": "优质不锈钢和黄铜材料",
+        "aestheticAppeal": "时尚现代的美学设计",
+        "easyInstallation": "专为简单安装而设计"
+      },
+      "specs": {
+        "materials": "材料",
+        "finishOptions": "表面处理选项",
+        "compatibility": "玻璃兼容性",
+        "loadCapacity": "负载能力"
+      },
+      "materialsValue": "不锈钢（304/316）、黄铜",
+      "finishOptionsValue": "抛光、拉丝、哑光",
+      "compatibilityValue": "玻璃厚度 8mm - 12mm",
+      "loadCapacityValue": "每个面板最多 100kg"
+    },
     "glazingGlass": {
       "title": "玻璃窗",
       "subtitle": "节能热解决方案",
@@ -307,7 +331,8 @@
   "productSection": {
     "keyFeatures": "主要特点：",
     "applications": "应用：",
-    "specifications": "规格："
+    "specifications": "规格：",
+    "downloadCatalogue": "下载目录"
   },
   "serviceCard": {
     "whatsIncluded": "包含内容："
