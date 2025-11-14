@@ -154,7 +154,7 @@ export default function Layout({ children, currentPageName }) {
                           <div className="flex items-start space-x-2">
                             <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-blue-600" />
                             <a 
-                              href="https://maps.google.com/?q=Bir+El+Djir+Oran+Algeria" 
+                              href="https://maps.app.goo.gl/WHHhDCVRCyxAoy4f9" 
                               target="_blank" 
                               rel="noopener noreferrer"
                               className="font-bold text-blue-600 hover:text-blue-700 underline"
@@ -415,7 +415,7 @@ export default function Layout({ children, currentPageName }) {
                 <div className="flex items-start space-x-2">
                   <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                   <a 
-                    href="https://maps.google.com/?q=Bir+El+Djir+Oran+Algeria" 
+                    href="https://maps.app.goo.gl/WHHhDCVRCyxAoy4f9" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="font-bold hover:text-blue-400 transition-colors underline"
