@@ -195,6 +195,22 @@
     }
   },
   "about": {
+    "history": {
+      "badge": "Notre Histoire",
+      "title": "Histoire",
+      "intro": "Notre histoire est celle d’une série de défis, transformés en réussites :",
+      "milestones": {
+        "2004": "Création de Vitrosak (ex-Sakglass)",
+        "2010": "Ligne de verre trempé architectural",
+        "2014": "Ligne automatique de double vitrage",
+        "2015": "Ligne de verre feuilleté",
+        "2017": "Ligne jumbo de verre trempé avancée",
+        "2020": "Première ligne pare-brise bus/camions",
+        "2023": "Augmentation capacité + expertise internationale",
+        "2025": "Modernisation complète des techniques",
+        "2026": "Deuxième ligne pare-brise"
+      }
+    },
     "qualityAssurance": "Assurance Qualité",
     "iso9001": "ISO 9001",
     "certifiedExcellence": "Excellence Certifiée",
@@ -409,4 +425,3 @@
     "endToEndSupportDescription": "Service complet de la conception à l'installation et au-delà"
   }
 }
-

@@ -6,6 +6,7 @@ import { Calculator, Palette, Factory, Wrench, CheckCircle, ArrowRight, Award, S
 import CompanyOverview from "../Components/home/CompanyOverview";
 import StatsSection from "../Components/home/StatsSection";
 import ServiceCard from "../Components/services/ServiceCard";
+import HistoryTimeline from "../Components/about/HistoryTimeline";
 
 export default function About() {
   const { t } = useTranslation();
@@ -103,6 +104,8 @@ export default function About() {
   return (
     <div className="min-h-screen bg-white">
       <CompanyOverview />
+
+      <HistoryTimeline />
       
       <StatsSection />
 

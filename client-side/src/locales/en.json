@@ -195,6 +195,22 @@
     }
   },
   "about": {
+    "history": {
+      "badge": "Our History",
+      "title": "History",
+      "intro": "Our story is a sequence of challenges transformed into achievements:",
+      "milestones": {
+        "2004": "Creation of Vitrosak (formerly Sakglass)",
+        "2010": "Architectural tempered glass line",
+        "2014": "Automatic double-glazing line",
+        "2015": "Laminated glass line",
+        "2017": "Advanced jumbo tempered glass line",
+        "2020": "First bus and truck windshield line",
+        "2023": "Capacity increase and international expertise",
+        "2025": "Complete modernization of techniques",
+        "2026": "Second windshield line"
+      }
+    },
     "qualityAssurance": "Quality Assurance",
     "iso9001": "ISO 9001",
     "certifiedExcellence": "Certified Excellence",
@@ -409,4 +425,3 @@
     "endToEndSupportDescription": "Complete service from design to installation and beyond"
   }
 }
-
