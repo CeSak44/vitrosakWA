@@ -7,6 +7,8 @@ import CompanyOverview from "../Components/home/CompanyOverview";
 import StatsSection from "../Components/home/StatsSection";
 import ServiceCard from "../Components/services/ServiceCard";
 
+import HistoryTimeline from "../Components/about/HistoryTimeline";
+
 export default function About() {
   const { t } = useTranslation();
   const services = [
@@ -16,7 +18,7 @@ export default function About() {
       description: t("about.services.estimating.description"),
       details: [
         t("about.services.estimating.details.costAnalysis"),
-        t("about.services.estimating.details.valueEngineering"), 
+        t("about.services.estimating.details.valueEngineering"),
         t("about.services.estimating.details.materialOptimization"),
         t("about.services.estimating.details.timelinePlanning"),
         t("about.services.estimating.details.pricingModels")
@@ -102,9 +104,15 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-white">
+
+      <HistoryTimeline />
+
+
       <CompanyOverview />
-      
+
       <StatsSection />
+
+
 
       {/* ISO 9001 Quality Section */}
       <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
@@ -139,7 +147,7 @@ export default function About() {
                 <Award className="w-4 h-4" />
                 <span className="text-sm font-semibold">{t("about.internationalStandard")}</span>
               </div>
-              
+
               <h3 className="text-4xl font-bold text-gray-900 mb-6">
                 {t("about.certificationImportance")}
               </h3>
@@ -163,10 +171,10 @@ export default function About() {
                   <div className="w-24 h-24 bg-gradient-to-r from-blue-600 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Award className="w-12 h-12 text-white" />
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{t("about.iso9001")}:2015</h3>
                   <p className="text-lg text-blue-600 font-semibold mb-6">Quality Management System</p>
-                  
+
                   {/* Certificate Image */}
                   <div className="border-2 border-gray-200 rounded-lg mb-6 overflow-hidden">
                     <img
@@ -175,7 +183,7 @@ export default function About() {
                       className="w-full h-auto"
                     />
                   </div>
-                  
+
                   <div className="text-sm text-gray-600 space-y-1 mt-6">
                     <p><strong>{t("about.certificateDetails.certifiedCompany")}:</strong> {t("about.certificateDetailsValues.company")}</p>
                     <p><strong>{t("about.certificateDetails.standard")}:</strong> {t("about.certificateDetailsValues.standard")}</p>
@@ -183,7 +191,7 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Decorative Elements */}
               <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl opacity-20 z-0" />
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl opacity-10 z-0" />
@@ -217,7 +225,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      
+
       {/* Services Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -10,7 +10,7 @@ export default function HeroSection() {
   const [busImageIndex, setBusImageIndex] = useState(0);
   const [scrollProgress, setScrollProgress] = useState(0);
   const sectionRef = useRef(null);
-  
+
   const backgrounds = [
     {
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -56,14 +56,14 @@ export default function HeroSection() {
   useEffect(() => {
     const handleScroll = () => {
       if (!sectionRef.current) return;
-      
+
       const rect = sectionRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       const sectionHeight = rect.height;
-      
+
       // Calculate progress when section is in viewport
       if (rect.top < windowHeight && rect.bottom > 0) {
-        const progress = Math.max(0, Math.min(1, 
+        const progress = Math.max(0, Math.min(1,
           (windowHeight - rect.top) / (windowHeight + sectionHeight)
         ));
         setScrollProgress(progress);
@@ -72,7 +72,7 @@ export default function HeroSection() {
 
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Initial check
-    
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -89,13 +89,12 @@ export default function HeroSection() {
       {backgrounds.map((bg, index) => {
         const isActive = index === currentBg;
         const currentImage = getCurrentBackgroundImage(bg, index);
-        
+
         return (
-          <div 
+          <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              isActive ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`absolute inset-0 transition-opacity duration-1000 ${isActive ? 'opacity-100' : 'opacity-0'
+              }`}
           >
             {/* If this background has multiple images (bus slide) */}
             {index === 1 && bg.images ? (
@@ -133,31 +132,31 @@ export default function HeroSection() {
           </div>
         );
       })}
-      
+
       {/* Animated Glass Pattern Overlay */}
       <div className="absolute inset-0 z-10">
-        <div 
+        <div
           className="absolute top-20 left-20 w-32 h-32 border-2 border-white/20 rotate-45 animate-pulse"
           style={{
             transform: `rotate(${45 + scrollProgress * 180}deg)`,
             transition: 'transform 150ms ease-out'
           }}
         />
-        <div 
+        <div
           className="absolute top-40 right-32 w-24 h-24 border-2 border-blue-300/30 rotate-12 animate-bounce"
           style={{
             transform: `rotate(${12 + scrollProgress * 90}deg) translateY(${scrollProgress * -20}px)`,
             transition: 'transform 150ms ease-out'
           }}
         />
-        <div 
+        <div
           className="absolute bottom-32 left-1/4 w-28 h-28 border-2 border-white/15 -rotate-12 animate-pulse"
           style={{
             transform: `rotate(${-12 - scrollProgress * 180}deg)`,
             transition: 'transform 150ms ease-out'
           }}
         />
-        <div 
+        <div
           className="absolute bottom-20 right-20 w-20 h-20 border-2 border-blue-200/25 rotate-45 animate-bounce"
           style={{
             transform: `rotate(${45 - scrollProgress * 90}deg) translateY(${scrollProgress * 20}px)`,
@@ -178,11 +177,10 @@ export default function HeroSection() {
           {/* Main Heading - Animated with Gradient */}
           <div className="mb-6">
             {backgrounds.map((bg, index) => (
-              <h1 
+              <h1
                 key={index}
-                className={`text-5xl md:text-7xl font-bold leading-tight transition-opacity duration-1000 ${
-                  index === currentBg ? 'opacity-100' : 'opacity-0 absolute inset-x-0'
-                }`}
+                className={`text-5xl md:text-7xl font-bold leading-tight transition-opacity duration-1000 ${index === currentBg ? 'opacity-100' : 'opacity-0 absolute inset-x-0'
+                  }`}
                 style={{
                   background: bg.gradient,
                   WebkitBackgroundClip: 'text',
@@ -198,11 +196,10 @@ export default function HeroSection() {
           {/* Subheading - Animated */}
           <div className="mb-8 h-32">
             {backgrounds.map((bg, index) => (
-              <p 
+              <p
                 key={index}
-                className={`text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed transition-opacity duration-1000 ${
-                  index === currentBg ? 'opacity-100' : 'opacity-0 absolute inset-x-0'
-                }`}
+                className={`text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed transition-opacity duration-1000 ${index === currentBg ? 'opacity-100' : 'opacity-0 absolute inset-x-0'
+                  }`}
               >
                 {bg.subtitle}
               </p>
@@ -217,7 +214,7 @@ export default function HeroSection() {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </Link>
-            
+
             <Link to={createPageUrl("Gallery")}>
               <button className="inline-flex items-center border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm bg-white/10 transform hover:scale-105 transition-all duration-200">
                 <PlayCircle className="w-5 h-5 mr-2" />
