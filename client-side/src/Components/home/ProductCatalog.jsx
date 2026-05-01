@@ -86,7 +86,7 @@ export default function ProductCatalog() {
   // Auto-scroll through images
   useEffect(() => {
     const intervals = [];
-    
+
     products.forEach((product, idx) => {
       if (product.images && product.images.length > 1) {
         const interval = setInterval(() => {
@@ -107,14 +107,14 @@ export default function ProductCatalog() {
     const handleScroll = () => {
       cardRefs.current.forEach((ref, index) => {
         if (!ref) return;
-        
+
         const rect = ref.getBoundingClientRect();
         const windowHeight = window.innerHeight;
         const cardHeight = rect.height;
-        
+
         // Calculate progress when card is in viewport
         if (rect.top < windowHeight && rect.bottom > 0) {
-          const progress = Math.max(0, Math.min(1, 
+          const progress = Math.max(0, Math.min(1,
             (windowHeight - rect.top) / (windowHeight + cardHeight)
           ));
           setScrollProgress(prev => ({
@@ -127,7 +127,7 @@ export default function ProductCatalog() {
 
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Initial check
-    
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []); // Empty dependency array - run once on mount
 
@@ -140,11 +140,11 @@ export default function ProductCatalog() {
             <Building className="w-4 h-4" />
             <span className="text-sm font-semibold">{t('home.productCatalog.badge')}</span>
           </div>
-          
+
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
             {t('home.productCatalog.sectionTitle')}
           </h2>
-          
+
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {t('home.productCatalog.intro')}
           </p>
@@ -157,8 +157,8 @@ export default function ProductCatalog() {
             const progress = scrollProgress[index] || 0;
 
             return (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 ref={el => cardRefs.current[index] = el}
                 className="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
@@ -184,7 +184,7 @@ export default function ProductCatalog() {
                           />
                         </div>
                       ))}
-                      
+
                       {/* Image Counter */}
                       {product.images.length > 1 && (
                         <div className="absolute bottom-4 right-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium z-10">
@@ -198,18 +198,17 @@ export default function ProductCatalog() {
                           {product.images.map((_, imgIndex) => (
                             <div
                               key={imgIndex}
-                              className={`h-2 rounded-full transition-all duration-300 ${
-                                imgIndex === currentImageIndex
-                                  ? 'bg-white w-6' 
+                              className={`h-2 rounded-full transition-all duration-300 ${imgIndex === currentImageIndex
+                                  ? 'bg-white w-6'
                                   : 'bg-white/50 w-2'
-                              }`}
+                                }`}
                             />
                           ))}
                         </div>
                       )}
                     </>
                   ) : null}
-                  
+
                   {/* Icon Badge */}
                   <div className="absolute top-6 left-6 z-10">
                     <div className="w-12 h-12 bg-blue-600/80 backdrop-blur-sm rounded-xl flex items-center justify-center">
@@ -224,7 +223,7 @@ export default function ProductCatalog() {
                 {/* Product Content */}
                 <div className="p-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{product.title}</h3>
-                  
+
                   {/* Types (if available) */}
                   {product.types && (
                     <div className="mb-4">
@@ -238,7 +237,7 @@ export default function ProductCatalog() {
                       </div>
                     </div>
                   )}
-                  
+
                   {/* Use Cases */}
                   <div>
                     <h4 className="text-sm font-semibold text-gray-900 mb-3">{t("home.products.applications")}</h4>

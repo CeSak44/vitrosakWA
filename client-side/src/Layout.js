@@ -1,14 +1,29 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation, Outlet } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { motion, AnimatePresence } from "framer-motion";
 import { createPageUrl } from "./utils";
-import { Mail, MapPin, ChevronDown } from "lucide-react";
+import { Mail, MapPin, ChevronDown, Menu, X } from "lucide-react";
 
 export default function Layout({ children, currentPageName }) {
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const [showContactDropdown, setShowContactDropdown] = useState(false);
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -64,54 +79,73 @@ export default function Layout({ children, currentPageName }) {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-white shadow-lg sticky top-0 z-50">
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-[#113154]/80 backdrop-blur-md shadow-lg" : "bg-transparent pt-4"
+        }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center md:justify-between items-center h-20">
+          <div className={`flex justify-between items-center transition-all duration-300 ${isScrolled ? "h-20" : "h-24"}`}>
             {/* Logo */}
             <Link to={createPageUrl("Home")} className="flex items-center">
-              <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6873cd222107ad5ca60f82e3/882c92d93_LOGO-1.png" 
-                alt="VITROSAK" 
-                className="h-12"
+              <img
+                src="/vitrosak/logo%20svg/logo-NavBar.svg"
+                alt="VITROSAK"
+                className="h-10 md:h-12 w-auto object-contain filter brightness-0 invert"
               />
             </Link>
 
+            {/* Mobile Menu Toggle */}
+            <button
+              className="md:hidden p-2 -mr-2 text-white hover:bg-white/10 rounded-lg transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8 items-center">
+            <nav className="hidden md:flex space-x-8 items-center font-industry">
               {navigationItems.map((item) => (
                 <Link
                   key={item.title}
                   to={item.url}
-                  className={`px-3 py-2 rounded-lg transition-all duration-200 font-medium ${
-                    location.pathname === item.url
-                      ? "bg-blue-100 text-blue-700"
-                      : "text-gray-700 hover:bg-gray-100 hover:text-blue-600"
-                  }`}
+                  className={`group relative px-2 py-2 transition-colors duration-300 font-medium tracking-wide ${location.pathname === item.url
+                    ? "text-white"
+                    : "text-white/80 hover:text-white"
+                    }`}
                 >
                   {item.title}
+                  {location.pathname === item.url && (
+                    <motion.div
+                      layoutId="desktop-nav-indicator"
+                      className="absolute bottom-0 left-0 w-full h-0.5 bg-brand-blue"
+                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    />
+                  )}
+                  {location.pathname !== item.url && (
+                    <div className="absolute bottom-0 left-0 w-full h-0.5 bg-brand-blue scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
+                  )}
                 </Link>
               ))}
-              
+
               {/* Contact Us Button with Dropdown */}
-              <div className="relative">
+              <div className="relative font-industry">
                 <button
                   onClick={() => setShowContactDropdown(!showContactDropdown)}
                   onMouseEnter={() => setShowContactDropdown(true)}
                   onMouseLeave={() => setShowContactDropdown(false)}
-                  className="flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600"
+                  className="group flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors duration-300 font-medium text-white/80 hover:bg-white/10 hover:text-white"
                 >
-                  <img 
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6873cd222107ad5ca60f82e3/64d3715dd_contactsSVG.png" 
-                    alt="Contact" 
-                    className="w-5 h-5"
+                  <img
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6873cd222107ad5ca60f82e3/64d3715dd_contactsSVG.png"
+                    alt="Contact"
+                    className="w-5 h-5 opacity-80 group-hover:opacity-100 transition-opacity filter brightness-0 invert"
                   />
                   <span>{t("nav.contactUs")}</span>
-                  <ChevronDown className="w-4 h-4" />
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${showContactDropdown ? "rotate-180" : ""}`} />
                 </button>
 
                 {showContactDropdown && (
-                  <div 
-                    className="absolute right-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-100 p-6 z-50"
+                  <div
+                    className="absolute right-0 mt-2 w-96 bg-white/95 backdrop-blur-md rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-brand-steel/10 p-6 z-50 origin-top-right animate-in fade-in zoom-in-95 duration-200"
                     onMouseEnter={() => setShowContactDropdown(true)}
                     onMouseLeave={() => setShowContactDropdown(false)}
                   >
@@ -122,9 +156,9 @@ export default function Layout({ children, currentPageName }) {
                         <div className="space-y-2 text-sm">
                           <div className="flex items-start space-x-2">
                             <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-blue-600" />
-                            <a 
-                              href="https://maps.google.com/?q=75+route+de+batna+ouled+boudhil+guedjel+Setif+Algeria" 
-                              target="_blank" 
+                            <a
+                              href="https://maps.google.com/?q=75+route+de+batna+ouled+boudhil+guedjel+Setif+Algeria"
+                              target="_blank"
                               rel="noopener noreferrer"
                               className="font-bold text-blue-600 hover:text-blue-700 underline"
                             >
@@ -153,9 +187,9 @@ export default function Layout({ children, currentPageName }) {
                         <div className="space-y-2 text-sm">
                           <div className="flex items-start space-x-2">
                             <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-blue-600" />
-                            <a 
-                              href="https://maps.app.goo.gl/WHHhDCVRCyxAoy4f9" 
-                              target="_blank" 
+                            <a
+                              href="https://maps.app.goo.gl/WHHhDCVRCyxAoy4f9"
+                              target="_blank"
                               rel="noopener noreferrer"
                               className="font-bold text-blue-600 hover:text-blue-700 underline"
                             >
@@ -174,12 +208,12 @@ export default function Layout({ children, currentPageName }) {
               </div>
 
               {/* Language Dropdown */}
-              <div className="relative">
+              <div className="relative font-industry">
                 <button
                   onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
                   onMouseEnter={showLanguage}
                   onMouseLeave={() => hideLanguageWithDelay()}
-                  className="flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600"
+                  className="group flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors duration-300 font-medium text-white/80 hover:bg-white/10 hover:text-white"
                 >
                   {/* Show currently selected language (flag + name) */}
                   <span className="flex items-center gap-2">
@@ -190,176 +224,153 @@ export default function Layout({ children, currentPageName }) {
                     )}
                     <span className="hidden sm:inline">{activeLanguage.name}</span>
                   </span>
-                  <ChevronDown className="w-4 h-4" />
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${showLanguageDropdown ? "rotate-180" : ""}`} />
                 </button>
 
                 {showLanguageDropdown && (
-                  <div 
-                    className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 z-50"
+                  <div
+                    className="absolute right-0 mt-2 w-48 bg-white/95 backdrop-blur-md rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-brand-steel/10 py-2 z-50 origin-top-right animate-in fade-in zoom-in-95 duration-200"
                     onMouseEnter={showLanguage}
                     onMouseLeave={() => hideLanguageWithDelay()}
                   >
-                        {languages.map((lang) => (
-                          <button
-                            key={lang.code}
-                            onClick={() => changeLanguage(lang.code)}
-                            className={`w-full flex items-center justify-between px-4 py-2 text-sm hover:bg-gray-100 transition-colors ${
-                              i18n.language === lang.code ? "bg-blue-50 text-blue-700" : "text-gray-700"
-                            }`}
-                          >
-                            <span className="flex items-center gap-3">
-                              <span>{lang.name}</span>
-                            </span>
-                            {/* Flag image (with emoji fallback) */}
-                            {lang.flagUrl ? (
-                              <img src={lang.flagUrl} alt={`${lang.code} flag`} className="w-6 h-4 object-cover rounded-sm" />
-                            ) : (
-                              <span className="text-xl">{lang.flag}</span>
-                            )}
-                          </button>
-                        ))}
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => changeLanguage(lang.code)}
+                        className={`w-full flex items-center justify-between px-4 py-2 text-sm hover:bg-gray-100 transition-colors ${i18n.language === lang.code ? "bg-blue-50 text-blue-700" : "text-gray-700"
+                          }`}
+                      >
+                        <span className="flex items-center gap-3">
+                          <span>{lang.name}</span>
+                        </span>
+                        {/* Flag image (with emoji fallback) */}
+                        {lang.flagUrl ? (
+                          <img src={lang.flagUrl} alt={`${lang.code} flag`} className="w-6 h-4 object-cover rounded-sm" />
+                        ) : (
+                          <span className="text-xl">{lang.flag}</span>
+                        )}
+                      </button>
+                    ))}
                   </div>
                 )}
               </div>
             </nav>
           </div>
 
-          {/* Contact Popup for Mobile */}
-          {showContactDropdown && (
-            <div className="md:hidden fixed bottom-20 left-0 right-0 z-50 bg-white border-t border-b border-gray-200 rounded-t-2xl rounded-b-2xl px-4 py-6 max-h-[80vh] overflow-y-auto">
-              <div className="space-y-6">
-                {/* Close Button */}
-                <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-semibold text-gray-900">{t("nav.contactUs")}</h3>
-                  <button 
-                    onClick={() => setShowContactDropdown(false)}
-                    className="p-2 rounded-full hover:bg-gray-100"
-                  >
-                    <span className="sr-only">Close</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
-
-                {/* Contact Content */}
-                <div>
-                  <h4 className="text-base font-semibold text-gray-900 mb-3">{t("contact.guedjelSetif")}</h4>
-                  <div className="space-y-3 text-sm">
-                    <a 
-                      href="https://maps.google.com/?q=75+route+de+batna+ouled+boudhil+guedjel+Setif+Algeria" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="block font-bold text-blue-600 underline"
-                    >
-                      {t("contact.viewOnGoogleMaps")}
-                    </a>
-                    <a href="mailto:marketing@vitrosak.com" className="block text-gray-700">marketing@vitrosak.com</a>
-                    <div className="space-y-1 text-gray-700">
-                      <p>+213 675 005 111</p>
-                      <p>+213 671 888 343</p>
-                      <p>+213 663 424 774</p>
-                      <p>+213 560 535 168</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="border-t border-gray-200 pt-4">
-                  <h4 className="text-base font-semibold text-gray-900 mb-3">{t("contact.birElDjirOran")}</h4>
-                  <div className="space-y-3 text-sm">
-                    <a 
-                      href="https://maps.google.com/?q=Bir+El+Djir+Oran+Algeria" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="block font-bold text-blue-600 underline"
-                    >
-                      {t("contact.viewOnGoogleMaps")}
-                    </a>
-                    <div className="space-y-1 text-gray-700">
-                      <p>+213 697 888 680</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       </header>
 
-      {/* Main Content - Add padding bottom on mobile for fixed navbar */}
-      <main className="flex-1 md:pb-0 pb-20">
+      {/* Mobile Drawer */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-brand-navy/60 backdrop-blur-sm z-40 md:hidden"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white shadow-2xl z-50 md:hidden flex flex-col font-industry"
+            >
+              <div className="flex justify-between items-center p-6 border-b border-brand-steel/10">
+                <img
+                  src="/vitrosak/logo%20svg/logo-NavBar.svg"
+                  alt="VITROSAK"
+                  className="h-8 w-auto object-contain"
+                />
+                <button
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="p-2 -mr-2 text-brand-navy hover:bg-brand-light/50 rounded-lg transition-colors"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+
+              <div className="flex-1 overflow-y-auto py-6 px-6 flex flex-col gap-6">
+                {/* Links */}
+                <div className="flex flex-col gap-4">
+                  {navigationItems.map((item) => (
+                    <Link
+                      key={item.title}
+                      to={item.url}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`text-lg font-medium transition-colors ${location.pathname === item.url
+                        ? "text-brand-blue"
+                        : "text-brand-navy hover:text-brand-blue"
+                        }`}
+                    >
+                      {item.title}
+                    </Link>
+                  ))}
+                </div>
+
+                <div className="h-px bg-brand-steel/10 w-full" />
+
+                {/* Language Selector */}
+                <div className="flex flex-col gap-3">
+                  <h3 className="text-sm font-semibold text-brand-steel uppercase tracking-wider">
+                    {t("nav.language", "Language")}
+                  </h3>
+                  <div className="grid grid-cols-2 gap-2">
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => {
+                          changeLanguage(lang.code);
+                          setIsMobileMenuOpen(false);
+                        }}
+                        className={`flex items-center gap-2 px-3 py-2 rounded-lg border transition-colors ${i18n.language === lang.code
+                          ? "border-brand-blue bg-brand-light/50 text-brand-blue"
+                          : "border-brand-steel/20 text-brand-navy hover:bg-brand-light/30"
+                          }`}
+                      >
+                        {lang.flagUrl ? (
+                          <img src={lang.flagUrl} alt={`${lang.name} flag`} className="w-5 h-3 object-cover rounded-sm" />
+                        ) : (
+                          <span className="text-sm">{lang.flag}</span>
+                        )}
+                        <span className="text-sm font-medium">{lang.name}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="h-px bg-brand-steel/10 w-full" />
+
+                {/* Contact Info */}
+                <div className="flex flex-col gap-3">
+                  <h3 className="text-sm font-semibold text-brand-steel uppercase tracking-wider">
+                    {t("nav.contactUs")}
+                  </h3>
+                  <a href="mailto:marketing@vitrosak.com" className="flex items-center gap-3 text-brand-navy hover:text-brand-blue transition-colors">
+                    <Mail className="w-5 h-5 text-brand-blue" />
+                    <span className="text-sm font-medium">marketing@vitrosak.com</span>
+                  </a>
+                  <a href="https://maps.google.com/?q=75+route+de+batna+ouled+boudhil+guedjel+Setif+Algeria" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 text-brand-navy hover:text-brand-blue transition-colors">
+                    <MapPin className="w-5 h-5 text-brand-blue shrink-0 mt-0.5" />
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium">{t("contact.guedjelSetif")}</span>
+                      <span className="text-xs opacity-70">{t("contact.viewOnGoogleMaps")}</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+
+      {/* Main Content */}
+      <main className="flex-1">
         <Outlet />
       </main>
 
-      {/* Mobile Bottom Navigation */}
-      {/* Floating Action Button for Contact */}
-      <button
-        onClick={() => setShowContactDropdown(true)}
-        className="md:hidden fixed bottom-20 right-4 z-50 bg-blue-600 text-white rounded-full p-4 shadow-lg hover:bg-blue-700 transition-colors duration-200"
-      >
-        <img 
-          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6873cd222107ad5ca60f82e3/64d3715dd_contactsSVG.png" 
-          alt="Contact" 
-          className="w-6 h-6 filter brightness-0 invert"
-        />
-        <span className="sr-only">{t("nav.contactUs")}</span>
-      </button>
-
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50">
-        <div className="flex justify-around items-center py-3 px-4">
-          {/* Navigation Links */}
-          {navigationItems.map((item) => (
-            <Link
-              key={item.title}
-              to={item.url}
-              className={`px-3 py-2 rounded-lg transition-all duration-200 font-medium ${
-                location.pathname === item.url
-                  ? "bg-blue-100 text-blue-700"
-                  : "text-gray-700 hover:bg-gray-100 hover:text-blue-600"
-              }`}
-            >
-              {item.title}
-            </Link>
-          ))}
-          
-          {/* Language Button */}
-          <button
-            onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
-            className="flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-200 font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600"
-          >
-            {activeLanguage.flagUrl ? (
-              <img src={activeLanguage.flagUrl} alt={`${activeLanguage.name} flag`} className="w-5 h-3 object-cover rounded-sm" />
-            ) : (
-              <span className="text-base">{activeLanguage.flag}</span>
-            )}
-            <span>{activeLanguage.name}</span>
-          </button>
-        </div>
-
-        {/* Language Dropdown (opens upward on mobile) */}
-        {showLanguageDropdown && (
-          <div className="absolute bottom-full left-0 right-0 mb-2 bg-white border-t border-gray-100 shadow-lg">
-            <div className="py-2">
-              {languages.map((lang) => (
-                <button
-                  key={lang.code}
-                  onClick={() => changeLanguage(lang.code)}
-                  className={`w-full flex items-center justify-between px-4 py-3 ${
-                    i18n.language === lang.code ? "bg-blue-50 text-blue-700" : "text-gray-700"
-                  }`}
-                >
-                  <span className="text-sm font-medium">{lang.name}</span>
-                  {lang.flagUrl ? (
-                    <img src={lang.flagUrl} alt={`${lang.name} flag`} className="w-6 h-4 object-cover rounded-sm" />
-                  ) : (
-                    <span className="text-lg">{lang.flag}</span>
-                  )}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-      </nav>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white">
@@ -367,9 +378,9 @@ export default function Layout({ children, currentPageName }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Company Logo */}
             <div>
-              <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6873cd222107ad5ca60f82e3/d467bfb83_LOGO-1.png" 
-                alt="VITROSAK" 
+              <img
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6873cd222107ad5ca60f82e3/d467bfb83_LOGO-1.png"
+                alt="VITROSAK"
                 className="h-12 mb-4"
               />
               <p className="text-gray-300 text-sm">
@@ -383,9 +394,9 @@ export default function Layout({ children, currentPageName }) {
               <div className="space-y-2 text-gray-300 text-sm">
                 <div className="flex items-start space-x-2">
                   <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                  <a 
-                    href="https://maps.google.com/?q=75+route+de+batna+ouled+boudhil+guedjel+Setif+Algeria" 
-                    target="_blank" 
+                  <a
+                    href="https://maps.google.com/?q=75+route+de+batna+ouled+boudhil+guedjel+Setif+Algeria"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="font-bold hover:text-blue-400 transition-colors underline"
                   >
@@ -414,9 +425,9 @@ export default function Layout({ children, currentPageName }) {
               <div className="space-y-2 text-gray-300 text-sm">
                 <div className="flex items-start space-x-2">
                   <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                  <a 
-                    href="https://maps.app.goo.gl/WHHhDCVRCyxAoy4f9" 
-                    target="_blank" 
+                  <a
+                    href="https://maps.app.goo.gl/WHHhDCVRCyxAoy4f9"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="font-bold hover:text-blue-400 transition-colors underline"
                   >

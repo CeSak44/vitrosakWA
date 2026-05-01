@@ -407,6 +407,20 @@
     "certifiedTeamDescription": "Professionnels qualifiés avec une vaste expérience dans l'industrie",
     "endToEndSupport": "Support de Bout en Bout",
     "endToEndSupportDescription": "Service complet de la conception à l'installation et au-delà"
+  },
+  "history": {
+    "title": "Notre histoire est celle d’une série de défis, transformés en réussites :",
+    "events": {
+      "2004": "Création de Vitrosak (ex-Sakglass)",
+      "2010": "Ligne de verre trempé architectural",
+      "2014": "Ligne automatique de double vitrage",
+      "2015": "Ligne de verre feuilleté",
+      "2017": "Ligne jumbo de verre trempé (multi-rayons)",
+      "2020": "Ligne pare-brise autobus et camions",
+      "2023": "Augmentation capacité + expertise internationale",
+      "2025": "Modernisation + savoir-faire international",
+      "2026": "Deuxième ligne de pare-brise"
+    }
   }
 }
 
