@@ -1,10 +1,9 @@
-
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Building, Car, Shield, Thermometer, Wrench } from "lucide-react";
 
 import ProductHero from "../Components/products/ProductHero";
-import ProductSection from "../Components/products/ProductSection";
+import AnimatedProductList from "../Components/products/AnimatedProductList";
 
 export default function Products() {
   const { t } = useTranslation();
@@ -178,42 +177,16 @@ export default function Products() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Desktop Hero */}
-      <div className="hidden lg:block">
-        <ProductHero />
-      </div>
-      
-      {/* Desktop Layout */}
-      <div className="hidden lg:block py-20">
-        {products.map((product, index) => (
-          <ProductSection
-            key={product.id}
-            product={product}
-            isReversed={index % 2 === 1}
-          />
-        ))}
-      </div>
-
-      {/* Mobile Layout with Scroll Snap */}
-      <div 
-        className="lg:hidden overflow-y-scroll"
-        style={{
-          scrollSnapType: 'y mandatory',
-          WebkitOverflowScrolling: 'touch',
-          scrollBehavior: 'smooth',
-          height: '100vh',
-          position: 'relative'
-        }}
-      >
-        {products.map((product, index) => (
-          <ProductSection
-            key={product.id}
-            product={product}
-            isReversed={index % 2 === 1}
-          />
-        ))}
-      </div>
+    <div 
+      onScroll={(e) => {
+        window.dispatchEvent(new CustomEvent('appScroll', { 
+          detail: { scrollY: e.currentTarget.scrollTop } 
+        }));
+      }}
+      className="min-h-screen bg-[#0a192f] md:bg-white md:overflow-visible overflow-y-scroll snap-y snap-mandatory h-screen md:h-auto scroll-smooth custom-scrollbar scroll-pt-[80px]"
+    >
+      <ProductHero />
+      <AnimatedProductList products={products} />
     </div>
   );
 }

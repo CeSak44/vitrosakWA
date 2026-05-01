@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { ImageIcon, Building, Users, Camera } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Gallery() {
   const { t } = useTranslation();
@@ -88,30 +89,63 @@ export default function Gallery() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-32 h-32 border-2 border-white rotate-45" />
-          <div className="absolute bottom-32 right-32 w-24 h-24 border-2 border-white -rotate-12" />
-          <div className="absolute top-1/2 left-1/3 w-28 h-28 border-2 border-white rotate-12" />
-        </div>
+      <section className="relative pt-40 pb-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+        {/* Background Pattern - Animated like ProductHero */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.1 }}
+          transition={{ duration: 1.5 }}
+          className="absolute inset-0"
+        >
+          <motion.div 
+            animate={{ rotate: [45, 90, 45] }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            className="absolute top-20 left-20 w-32 h-32 border-2 border-white" 
+          />
+          <motion.div 
+            animate={{ rotate: [-12, -45, -12] }}
+            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+            className="absolute bottom-32 right-32 w-24 h-24 border-2 border-white" 
+          />
+          <motion.div 
+            animate={{ rotate: [12, 60, 12] }}
+            transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
+            className="absolute top-1/2 left-1/3 w-28 h-28 border-2 border-white" 
+          />
+        </motion.div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center text-white">
-            <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
+            <motion.div 
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+              className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-8"
+            >
               <ImageIcon className="w-5 h-5" />
               <span className="font-medium">{t("gallery.projectGallery")}</span>
-            </div>
+            </motion.div>
 
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+              className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
+            >
               {t("gallery.ourWork")}
-              <span className="block bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent mt-2">
                 {t("gallery.inAction")}
               </span>
-            </h1>
+            </motion.h1>
 
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+            <motion.p 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
+              className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
+            >
               {t("gallery.description")}
-            </p>
+            </motion.p>
           </div>
         </div>
       </section>
@@ -131,8 +165,12 @@ export default function Gallery() {
           {/* Masonry Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[200px]">
             {galleryImages.map((image, index) => (
-              <div
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
                 className={`group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ${image.span}`}
               >
                 <img
@@ -155,7 +193,7 @@ export default function Gallery() {
 
                 {/* Border on Hover */}
                 <div className="absolute inset-0 border-4 border-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none" />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

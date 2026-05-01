@@ -410,15 +410,15 @@
   "history": {
     "title": "Our history is a series of challenges transformed into successes:",
     "events": {
-      "2004": "Creation of Vitrosak (formerly Sakglass)",
-      "2010": "Architectural tempered glass line",
-      "2014": "Automatic double glazing line",
-      "2015": "Laminated glass line",
-      "2017": "Jumbo tempered glass line (multi-radius)",
-      "2020": "Bus and truck windshield line",
-      "2023": "Capacity increase + international expertise",
-      "2025": "Modernization + international know-how",
-      "2026": "Second windshield line"
+      "2004": "Creation of [Vitrosak] (formerly Sakglass)",
+      "2010": "Architectural [tempered glass] line",
+      "2014": "Automatic [double glazing] line",
+      "2015": "[Laminated glass] line",
+      "2017": "[Jumbo tempered glass] line (multi-radius)",
+      "2020": "[Bus and truck windshield] line",
+      "2023": "Capacity [increase] + [international] expertise",
+      "2025": "[Modernization] + [international] know-how",
+      "2026": "[Second windshield] line"
     }
   }
 }

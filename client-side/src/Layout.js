@@ -14,11 +14,16 @@ export default function Layout({ children, currentPageName }) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+    const handleScroll = (e) => {
+      const scrollY = e?.detail?.scrollY ?? window.scrollY;
+      setIsScrolled(scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('appScroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('appScroll', handleScroll);
+    };
   }, []);
 
   useEffect(() => {

@@ -1,5 +1,5 @@
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { createPageUrl } from "../../utils";
@@ -7,7 +7,7 @@ import { ArrowRight, Shield, Thermometer, Car, Building } from "lucide-react";
 
 export default function ProductCatalog() {
   const { t } = useTranslation();
-  const products = [
+  const products = useMemo(() => [
     {
       icon: Building,
       title: t("home.products.temperedGlass"),
@@ -77,7 +77,7 @@ export default function ProductCatalog() {
         "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6873cd222107ad5ca60f82e3/627b8c3c2_photo_2025-11-07200442.jpg"
       ]
     }
-  ];
+  ], [t]);
 
   const [imageIndices, setImageIndices] = useState({});
   const [scrollProgress, setScrollProgress] = useState({});
@@ -100,7 +100,7 @@ export default function ProductCatalog() {
     });
 
     return () => intervals.forEach(interval => clearInterval(interval));
-  }, []); // Empty dependency array - run once on mount
+  }, [products]); // Run when products list changes
 
   // Parallax scroll effect
   useEffect(() => {
@@ -129,7 +129,7 @@ export default function ProductCatalog() {
     handleScroll(); // Initial check
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []); // Empty dependency array - run once on mount
+  }, []); // Run once on mount
 
   return (
     <section className="py-20 bg-white">

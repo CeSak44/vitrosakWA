@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { createPageUrl } from "../../utils";
@@ -11,7 +11,7 @@ export default function HeroSection() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const sectionRef = useRef(null);
 
-  const backgrounds = [
+  const backgrounds = useMemo(() => [
     {
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       title: t("home.hero.title1"),
@@ -30,7 +30,7 @@ export default function HeroSection() {
       subtitle: t("home.hero.subtitle2"),
       gradient: "linear-gradient(135deg, #3477AC 0%, #C5DBF0 50%, #ffffff 100%)"
     }
-  ];
+  ], [t]);
 
   // Background slide auto-switch
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function HeroSection() {
     }, 5000);
 
     return () => clearInterval(bgInterval);
-  }, []);
+  }, [backgrounds.length]);
 
   // Bus images auto-scroll
   useEffect(() => {
@@ -50,7 +50,7 @@ export default function HeroSection() {
     }, 3000);
 
     return () => clearInterval(busImageInterval);
-  }, []);
+  }, [backgrounds]);
 
   // Parallax scroll effect
   useEffect(() => {
