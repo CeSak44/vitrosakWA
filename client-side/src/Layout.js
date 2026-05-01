@@ -91,7 +91,7 @@ export default function Layout({ children, currentPageName }) {
               <img
                 src="/vitrosak/logo%20svg/logo-nav-bar-new.svg"
                 alt="VITROSAK"
-                className="h-10 md:h-12 w-auto object-contain filter brightness-0 invert"
+                className="h-10 md:h-12 w-auto object-contain "
               />
             </Link>
 
@@ -381,8 +381,8 @@ export default function Layout({ children, currentPageName }) {
               <p className="text-white/70 text-xs md:text-sm leading-relaxed max-w-xs text-center md:text-left">
                 {t("footer.description")}
               </p>
-              <a 
-                href="/catalogue accessoire fini_251109_152122.pdf" 
+              <a
+                href="/catalogue accessoire fini_251109_152122.pdf"
                 download
                 className="inline-flex items-center gap-3 bg-[#2378ff] hover:bg-[#1a5bbd] text-white px-4 py-2.5 rounded-xl transition-all duration-300 font-semibold text-sm w-fit group shadow-lg shadow-blue-900/20 whitespace-nowrap"
               >
@@ -396,19 +396,19 @@ export default function Layout({ children, currentPageName }) {
             {/* Column 2: Navigation */}
             <div>
               <h4 className="text-xl font-bold mb-8 uppercase tracking-wider hidden md:block">Navigation</h4>
-              <button 
+              <button
                 className="flex md:hidden w-full items-center justify-between py-2 border-b border-white/10"
                 onClick={() => setExpandedFooterCol(expandedFooterCol === 'nav' ? null : 'nav')}
               >
                 <span className="text-lg font-bold uppercase tracking-wider">Navigation</span>
                 <ChevronDown className={`w-5 h-5 transition-transform ${expandedFooterCol === 'nav' ? 'rotate-180' : ''}`} />
               </button>
-              
+
               <div className={`${expandedFooterCol === 'nav' ? 'block' : 'hidden'} md:block transition-all duration-300`}>
                 <nav className="flex flex-col gap-5 py-2 md:py-0">
                   {navigationItems.map((item) => (
-                    <Link 
-                      key={item.title} 
+                    <Link
+                      key={item.title}
                       to={item.url}
                       className="text-white hover:text-blue-400 transition-colors underline underline-offset-8 decoration-white/20 hover:decoration-blue-400/50 text-lg"
                     >
@@ -422,7 +422,7 @@ export default function Layout({ children, currentPageName }) {
             {/* Column 3: Sétif Contact */}
             <div>
               <h4 className="text-xl font-bold mb-8 uppercase tracking-wider hidden md:block">{t("contact.guedjelSetif")}</h4>
-              <button 
+              <button
                 className="flex md:hidden w-full items-center justify-between py-2 border-b border-white/10"
                 onClick={() => setExpandedFooterCol(expandedFooterCol === 'setif' ? null : 'setif')}
               >
@@ -465,7 +465,7 @@ export default function Layout({ children, currentPageName }) {
             {/* Column 4: Oran Contact */}
             <div>
               <h4 className="text-xl font-bold mb-8 uppercase tracking-wider hidden md:block">{t("contact.birElDjirOran")}</h4>
-              <button 
+              <button
                 className="flex md:hidden w-full items-center justify-between py-2 border-b border-white/10"
                 onClick={() => setExpandedFooterCol(expandedFooterCol === 'oran' ? null : 'oran')}
               >
