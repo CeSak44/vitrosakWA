@@ -82,6 +82,31 @@ export default function ProductCatalog() {
   const [imageIndices, setImageIndices] = useState({});
   const [scrollProgress, setScrollProgress] = useState({});
   const cardRefs = useRef([]);
+  const scrollRefs = useRef({});
+
+  const handleImageScroll = (idx, e) => {
+    const container = e.target;
+    const width = container.offsetWidth;
+    if (width === 0) return;
+    
+    const newIndex = Math.round(container.scrollLeft / width);
+    if (imageIndices[idx] !== newIndex) {
+      setImageIndices(prev => ({ ...prev, [idx]: newIndex }));
+    }
+  };
+
+  // Synchronize auto-scroll with horizontal scroll position
+  useEffect(() => {
+    products.forEach((_, idx) => {
+      const container = scrollRefs.current[idx];
+      if (container) {
+        const targetScroll = (imageIndices[idx] || 0) * container.offsetWidth;
+        if (Math.abs(container.scrollLeft - targetScroll) > 10) {
+          container.scrollTo({ left: targetScroll, behavior: "smooth" });
+        }
+      }
+    });
+  }, [imageIndices, products]);
 
   // Auto-scroll through images
   useEffect(() => {
