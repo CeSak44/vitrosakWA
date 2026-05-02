@@ -160,7 +160,7 @@ export default function ProductCatalog() {
               <div
                 key={index}
                 ref={el => cardRefs.current[index] = el}
-                className="group bg-gray-50 rounded-[3rem] overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                className="group bg-[#2789FF]/10 rounded-[3rem] overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
                 {/* Product Image with Parallax Slider */}
                 <div className="relative h-64 overflow-hidden">
