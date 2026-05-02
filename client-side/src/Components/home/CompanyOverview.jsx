@@ -15,7 +15,7 @@ export default function CompanyOverview() {
   ];
 
   const highlights = [
-    { icon: Calendar, label: t("companyOverview.established"), value: "2011" },
+    { icon: Calendar, label: t("companyOverview.established"), value: "2004" },
     { icon: MapPin, label: t("companyOverview.location"), value: "Sétif, Algeria" },
     { icon: Factory, label: t("companyOverview.facilitySize"), value: "15,000m²" },
     { icon: Users, label: t("companyOverview.productionArea"), value: "4,500m²" },
@@ -34,14 +34,14 @@ export default function CompanyOverview() {
   useEffect(() => {
     const handleScroll = () => {
       if (!sectionRef.current) return;
-      
+
       const rect = sectionRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       const sectionHeight = rect.height;
-      
+
       // Calculate progress when section is in viewport
       if (rect.top < windowHeight && rect.bottom > 0) {
-        const progress = Math.max(0, Math.min(1, 
+        const progress = Math.max(0, Math.min(1,
           (windowHeight - rect.top) / (windowHeight + sectionHeight)
         ));
         setScrollProgress(progress);
@@ -50,7 +50,7 @@ export default function CompanyOverview() {
 
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Initial check
-    
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -64,12 +64,12 @@ export default function CompanyOverview() {
               <Award className="w-4 h-4" />
               <span className="text-sm font-semibold">{t("companyOverview.aboutVitrosak")}</span>
             </div>
-            
+
             <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
               {t("companyOverview.leadingGlass")}
               <span className="block text-blue-600">{t("companyOverview.excellenceInAlgeria")}</span>
             </h2>
-            
+
             <div className="text-lg text-gray-700 space-y-4 mb-8">
               <p>
                 {t("companyOverview.description1")}
@@ -130,21 +130,20 @@ export default function CompanyOverview() {
                   {images.map((_, index) => (
                     <div
                       key={index}
-                      className={`h-2 rounded-full transition-all duration-300 ${
-                        index === currentImageIndex
-                          ? 'bg-white w-6' 
+                      className={`h-2 rounded-full transition-all duration-300 ${index === currentImageIndex
+                          ? 'bg-white w-6'
                           : 'bg-white/50 w-2'
-                      }`}
+                        }`}
                     />
                   ))}
                 </div>
               </div>
             </div>
-            
+
             {/* Decorative Elements */}
             <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-r from-blue-400 to-cyan-300 rounded-2xl opacity-20 z-0" />
             <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl opacity-30 z-0" />
-            
+
             {/* Floating Stats Card */}
             <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-2xl p-6 z-20 border border-gray-100">
               <div className="text-center">
