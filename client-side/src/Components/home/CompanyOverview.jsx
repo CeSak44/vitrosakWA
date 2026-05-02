@@ -262,7 +262,7 @@ export default function CompanyOverview() {
           {/* Visual Element with Parallax Slider */}
           <div className="relative">
             <div className="relative z-10">
-              <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative h-96 rounded-[3rem] overflow-hidden shadow-2xl">
                 {/* Image Stack with Fade & Parallax */}
                 {images.map((image, index) => (
                   <div

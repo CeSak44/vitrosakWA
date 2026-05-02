@@ -268,64 +268,103 @@ export default function Layout({ children, currentPageName }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-brand-navy/60 backdrop-blur-sm z-40 md:hidden"
+              className="fixed inset-0 bg-black/50 backdrop-blur-md z-40 md:hidden"
               onClick={() => setIsMobileMenuOpen(false)}
             />
             <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white shadow-2xl z-50 md:hidden flex flex-col font-industry"
+              initial={{ x: "100%", opacity: 0.5 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: "100%", opacity: 0 }}
+              transition={{ type: "spring", damping: 28, stiffness: 300, mass: 0.8 }}
+              className="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-[#0a1e37]/85 backdrop-blur-2xl shadow-[0_0_60px_rgba(0,0,0,0.5)] border-l border-white/10 z-50 md:hidden flex flex-col font-industry"
             >
-              <div className="flex justify-between items-center p-6 border-b border-brand-steel/10">
-                <img
-                  src="/vitrosak/logo%20svg/logo-nav-bar-new.svg"
+              {/* Header */}
+              <div className="flex justify-between items-center p-6 border-b border-white/10">
+                <motion.img
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ type: "spring", damping: 20, stiffness: 300, delay: 0.15 }}
+                  src="/vitrosak/logo%20svg/logo-NavBar.svg"
                   alt="VITROSAK"
-                  className="h-8 w-auto object-contain"
+                  className="h-8 w-auto object-contain brightness-0 invert"
                 />
-                <button
+                <motion.button
+                  initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
+                  animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                  transition={{ type: "spring", damping: 15, stiffness: 200, delay: 0.2 }}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="p-2 -mr-2 text-brand-navy hover:bg-brand-light/50 rounded-lg transition-colors"
+                  className="p-2 -mr-2 text-white/80 hover:bg-white/10 rounded-lg transition-colors"
                 >
                   <X className="w-6 h-6" />
-                </button>
+                </motion.button>
               </div>
 
               <div className="flex-1 overflow-y-auto py-6 px-6 flex flex-col gap-6">
+                {/* Navigation Links */}
                 <div className="flex flex-col gap-4">
-                  {navigationItems.map((item) => (
-                    <Link
+                  {navigationItems.map((item, index) => (
+                    <motion.div
                       key={item.title}
-                      to={item.url}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className={`text-lg font-medium transition-colors ${location.pathname === item.url
-                        ? "text-brand-blue"
-                        : "text-brand-navy hover:text-brand-blue"
-                        }`}
+                      initial={{ opacity: 0, x: 40 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{
+                        type: "spring",
+                        damping: 20,
+                        stiffness: 250,
+                        delay: 0.1 + index * 0.07
+                      }}
                     >
-                      {item.title}
-                    </Link>
+                      <Link
+                        to={item.url}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={`text-lg font-medium transition-colors block ${location.pathname === item.url
+                          ? "text-cyan-400"
+                          : "text-white/90 hover:text-cyan-400"
+                          }`}
+                      >
+                        {item.title}
+                      </Link>
+                    </motion.div>
                   ))}
                 </div>
 
-                <div className="h-px bg-brand-steel/10 w-full" />
+                {/* Divider */}
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ type: "spring", damping: 30, stiffness: 200, delay: 0.35 }}
+                  className="h-px bg-white/10 w-full origin-left"
+                />
 
-                <div className="flex flex-col gap-3">
-                  <h3 className="text-sm font-semibold text-brand-steel uppercase tracking-wider">
+                {/* Language Section */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ type: "spring", damping: 22, stiffness: 200, delay: 0.4 }}
+                  className="flex flex-col gap-3"
+                >
+                  <h3 className="text-sm font-semibold text-blue-300/70 uppercase tracking-wider">
                     {t("nav.language", "Language")}
                   </h3>
                   <div className="grid grid-cols-2 gap-2">
-                    {languages.map((lang) => (
-                      <button
+                    {languages.map((lang, index) => (
+                      <motion.button
                         key={lang.code}
+                        initial={{ opacity: 0, scale: 0.85 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                          type: "spring",
+                          damping: 18,
+                          stiffness: 250,
+                          delay: 0.45 + index * 0.06
+                        }}
                         onClick={() => {
                           changeLanguage(lang.code);
                           setIsMobileMenuOpen(false);
                         }}
                         className={`flex items-center gap-2 px-3 py-2 rounded-lg border transition-colors ${i18n.language === lang.code
-                          ? "border-brand-blue bg-brand-light/50 text-brand-blue"
-                          : "border-brand-steel/20 text-brand-navy hover:bg-brand-light/30"
+                          ? "border-cyan-400/50 bg-cyan-400/10 text-cyan-400"
+                          : "border-white/15 text-white/80 hover:bg-white/10"
                           }`}
                       >
                         {lang.flagUrl ? (
@@ -334,29 +373,95 @@ export default function Layout({ children, currentPageName }) {
                           <span className="text-sm">{lang.flag}</span>
                         )}
                         <span className="text-sm font-medium">{lang.name}</span>
-                      </button>
+                      </motion.button>
                     ))}
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="h-px bg-brand-steel/10 w-full" />
+                {/* Divider */}
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ type: "spring", damping: 30, stiffness: 200, delay: 0.55 }}
+                  className="h-px bg-white/10 w-full origin-left"
+                />
 
-                <div className="flex flex-col gap-3">
-                  <h3 className="text-sm font-semibold text-brand-steel uppercase tracking-wider">
+                {/* Contact Section */}
+                <motion.div
+                  initial={{ opacity: 0, y: 25 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ type: "spring", damping: 22, stiffness: 180, delay: 0.6 }}
+                  className="flex flex-col gap-4"
+                >
+                  <h3 className="text-sm font-semibold text-blue-300/70 uppercase tracking-wider">
                     {t("nav.contactUs")}
                   </h3>
-                  <a href="mailto:marketing@vitrosak.com" className="flex items-center gap-3 text-brand-navy hover:text-brand-blue transition-colors">
-                    <Mail className="w-5 h-5 text-brand-blue" />
+
+                  {/* Email */}
+                  <motion.a
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ type: "spring", damping: 20, stiffness: 200, delay: 0.65 }}
+                    href="mailto:marketing@vitrosak.com"
+                    className="flex items-center gap-3 text-white/80 hover:text-cyan-400 transition-colors"
+                  >
+                    <Mail className="w-5 h-5 text-cyan-400 shrink-0" />
                     <span className="text-sm font-medium">marketing@vitrosak.com</span>
-                  </a>
-                  <a href="https://maps.google.com/?q=75+route+de+batna+ouled+boudhil+guedjel+Setif+Algeria" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 text-brand-navy hover:text-brand-blue transition-colors">
-                    <MapPin className="w-5 h-5 text-brand-blue shrink-0 mt-0.5" />
-                    <div className="flex flex-col">
-                      <span className="text-sm font-medium">{t("contact.guedjelSetif")}</span>
-                      <span className="text-xs opacity-70">{t("contact.viewOnGoogleMaps")}</span>
+                  </motion.a>
+
+                  {/* Sétif Location */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ type: "spring", damping: 22, stiffness: 200, delay: 0.7 }}
+                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 space-y-3"
+                  >
+                    <h4 className="text-sm font-bold text-white">{t("contact.guedjelSetif")}</h4>
+                    <a href="https://maps.google.com/?q=75+route+de+batna+ouled+boudhil+guedjel+Setif+Algeria" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 text-white/80 hover:text-cyan-400 transition-colors">
+                      <MapPin className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                      <div className="flex flex-col">
+                        <span className="text-sm font-semibold text-cyan-400 underline underline-offset-2">{t("contact.viewOnGoogleMaps")}</span>
+                        <span className="text-xs text-blue-200/50 mt-0.5">{t("contact.address")}</span>
+                      </div>
+                    </a>
+                    <div className="pl-7 space-y-1.5">
+                      <a href="tel:+213675005111" className="flex items-center gap-2 text-sm text-white/70 hover:text-cyan-400 transition-colors">
+                        <span className="font-medium">+213 675 005 111</span>
+                      </a>
+                      <a href="tel:+213671888343" className="flex items-center gap-2 text-sm text-white/70 hover:text-cyan-400 transition-colors">
+                        <span className="font-medium">+213 671 888 343</span>
+                      </a>
+                      <a href="tel:+213663424774" className="flex items-center gap-2 text-sm text-white/70 hover:text-cyan-400 transition-colors">
+                        <span className="font-medium">+213 663 424 774</span>
+                      </a>
+                      <a href="tel:+213560535168" className="flex items-center gap-2 text-sm text-white/70 hover:text-cyan-400 transition-colors">
+                        <span className="font-medium">+213 560 535 168</span>
+                      </a>
                     </div>
-                  </a>
-                </div>
+                  </motion.div>
+
+                  {/* Oran Location */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ type: "spring", damping: 22, stiffness: 200, delay: 0.8 }}
+                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 space-y-3"
+                  >
+                    <h4 className="text-sm font-bold text-white">{t("contact.birElDjirOran")}</h4>
+                    <a href="https://maps.app.goo.gl/WHHhDCVRCyxAoy4f9" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 text-white/80 hover:text-cyan-400 transition-colors">
+                      <MapPin className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                      <div className="flex flex-col">
+                        <span className="text-sm font-semibold text-cyan-400 underline underline-offset-2">{t("contact.viewOnGoogleMaps")}</span>
+                        <span className="text-xs text-blue-200/50 mt-0.5">{t("contact.showroom")}</span>
+                      </div>
+                    </a>
+                    <div className="pl-7">
+                      <a href="tel:+213697888680" className="flex items-center gap-2 text-sm text-white/70 hover:text-cyan-400 transition-colors">
+                        <span className="font-medium">+213 697 888 680</span>
+                      </a>
+                    </div>
+                  </motion.div>
+                </motion.div>
               </div>
             </motion.div>
           </>
