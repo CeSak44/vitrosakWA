@@ -29,7 +29,7 @@ const itemVariants = {
 export default function ProductHero() {
   const { t } = useTranslation();
   return (
-    <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 overflow-hidden snap-start h-[90vh] flex flex-col justify-center pt-28">
+    <section className="relative bg-gradient-to-br from-[#020610] via-[#081528] to-[#0a1e3d] overflow-hidden snap-start h-[90vh] flex flex-col justify-center pt-28">
       {/* Background Pattern */}
       <motion.div 
         initial={{ opacity: 0 }}
