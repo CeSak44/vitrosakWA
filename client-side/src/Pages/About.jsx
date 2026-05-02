@@ -103,7 +103,7 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
 
       <HistoryTimeline />
 
@@ -123,7 +123,7 @@ export default function About() {
               <span className="font-medium">{t("about.qualityAssurance")}</span>
             </div>
 
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
               {t("about.iso9001")}
               <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
                 {t("about.certifiedExcellence")}
@@ -138,7 +138,7 @@ export default function About() {
       </section>
 
       {/* Certification Details */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Certificate Importance */}
@@ -148,7 +148,7 @@ export default function About() {
                 <span className="text-sm font-semibold">{t("about.internationalStandard")}</span>
               </div>
 
-              <h3 className="text-4xl font-bold text-gray-900 mb-6">
+              <h3 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-6">
                 {t("about.certificationImportance")}
               </h3>
 
